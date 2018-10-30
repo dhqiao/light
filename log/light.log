@@ -1,7 +1,8 @@
-2018-10-23 09:09:04.126 ERROR models/init.go:33 Database connection failed. Database name: test_db2 error: Error 1049: Unknown database 'test_db2'
-2018-10-23 09:09:04.126 ERROR models/init.go:33 Database connection failed. Database name: test_db2 error: Error 1049: Unknown database 'test_db2'
-2018-10-23 09:09:04.126 INFO envcheck/check.go:32 Start to listening the incoming requests on http address: :8089
-2018-10-23 09:09:04.126 INFO envcheck/check.go:27 Start to listening the incoming requests on https address: :8081
-2018-10-23 09:09:04.127 INFO envcheck/check.go:28 open conf/server.crt: no such file or directory
-2018-10-23 09:09:04.127 INFO health/check.go:34 The router has been deployed successfully.583a656b-c9bc-4e7e-a2c5-28b0286d08fa
-2018-10-23 09:09:04.127 INFO envcheck/check.go:19 The router has been deployed successfully.
+2018-10-30 09:23:36.307 ERROR models/init.go:33 Database connection failed. Database name: test_db2 error: Error 1049: Unknown database 'test_db2'
+2018-10-30 09:23:36.308 ERROR models/init.go:33 Database connection failed. Database name: test_db2 error: Error 1049: Unknown database 'test_db2'
+2018-10-30 09:23:36.308 INFO envcheck/check.go:32 Start to listening the incoming requests on http address: :8089
+2018-10-30 09:23:36.308 INFO envcheck/check.go:27 Start to listening the incoming requests on https address: :8081
+2018-10-30 09:23:36.308 INFO envcheck/check.go:28 open conf/server.crt: no such file or directory
+2018-10-30 09:23:36.308 INFO health/check.go:34 The router has been deployed successfully.e913d25e-d767-4289-8852-6fc78ffb88b1
+2018-10-30 09:23:36.309 INFO envcheck/check.go:19 The router has been deployed successfully.
+2018-10-30 09:23:47.500 INFO health/check.go:34 The router has been deployed successfully.233c528a-ac7d-47fb-8cc3-026216e3054b

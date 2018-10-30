@@ -1,0 +1,25 @@
+// private_data_test_config.json
+
+[
+  {
+    "name": "techHousePropertyTransactionTwo",
+    "policy": "OR('member1.example.com', 'member2.example.com')",
+    "requiredPeerCount": 0,
+    "maxPeerCount": 3,
+    "blockToLive":1000000
+  },
+  {
+    "name": "techHousePropertyTransactionOne",
+    "policy": "OR('member1.example.com')",
+    "requiredPeerCount": 0,
+    "maxPeerCount": 2,
+    "blockToLive":1000000
+  },
+  {
+    "name": "techHousePropertyTransactionTemp",
+    "policy": "OR('member1.example.com')",
+    "requiredPeerCount": 0,
+    "maxPeerCount": 2,
+    "blockToLive":3
+  }
+]
