@@ -275,6 +275,54 @@ func (t *Chaincode) write(stub shim.ChaincodeStubInterface, key, value string) p
 	return shim.Success(nil)
 }
 
+// 隐私数据 1.2 新特性
+func (t *Chaincode) writePrivateData(stub shim.ChaincodeStubInterface, collection, key, value string) pb.Response {
+	fmt.Println("write private data collection s%, key is s%, value is s% \n", collection,  key, value)
+	if err := stub.PutPrivateData(collection, key, []byte(value)); err != nil {
+		return shim.Error("write fail " + err.Error())
+	}
+	return shim.Success(nil)
+}
+
+// 隐私数据 1.2 新特性
+func (t *Chaincode) getPrivateData(stub shim.ChaincodeStubInterface, collection, key string) pb.Response {
+	fmt.Println("get private data collection s%, key is s% \n", collection,  key)
+	bytes, err := stub.GetPrivateData(collection, key)
+	if err != nil {
+		return shim.Error("query fail " + err.Error())
+	}
+	return shim.Success(bytes)
+}
+
+func (t *Chaincode) getPrivateByRange(stub shim.ChaincodeStubInterface, collection, startKey, endKey string) pb.Response {
+	fmt.Printf("getCollectionByRange s% - %s - %s\n", collection, startKey, endKey)
+	iter, err := stub.GetPrivateDataByRange(collection, startKey, endKey)
+	defer iter.Close()
+	if err != nil {
+		return shim.Error("getByRange fail " + err.Error())
+	}
+
+	values := make(map[string]string)
+
+	for iter.HasNext() {
+		fmt.Println("next \n")
+		if kv, err := iter.Next(); err == nil {
+			fmt.Println("id: %s value: %s namespace: %s\n", kv.Key, kv.Value, kv.Namespace)
+			values[kv.Key] = string(kv.Value)
+		}
+		if err != nil {
+			return shim.Error("iterator getByRange fail: " + err.Error())
+		}
+	}
+	bytes, err := json.Marshal(values)
+	if err != nil {
+		return shim.Error("json marshal fail: " + err.Error())
+	}
+
+	return shim.Success(bytes)
+}
+
+
 //{"Args":["init"]}
 func (t *Chaincode) Init(stub shim.ChaincodeStubInterface) pb.Response {
 	fmt.Println("Init Chaincode Chaincode")
@@ -317,7 +365,26 @@ func (t *Chaincode) Invoke(stub shim.ChaincodeStubInterface) pb.Response {
 			return shim.Error("parametes's number is wrong")
 		}
 		return t.write(stub, args[0], args[1])
-	//删除一个key
+		//创建一个key隐私数据，并写入key的值
+	case "writePrivateData": //写入
+		if len(args) != 3 {
+			return shim.Error("parametes's number is wrong")
+		}
+		return t.writePrivateData(stub, args[0], args[1], args[2])
+	// 查询隐私数据
+	case "getPrivateData":
+		if len(args) != 2 {
+			return shim.Error("parametes's number is wrong")
+		}
+		return t.getPrivateData(stub, args[0], args[1])
+	// 隐私数据
+	case "getPrivateByRange":
+		if len(args) != 3 {
+			return shim.Error("parametes's number is wrong")
+		}
+		return t.getPrivateByRange(stub, args[0], args[1], args[2])
+
+		//删除一个key
 	case "del":
 		if len(args) != 1 {
 			return shim.Error("parametes's number is wrong")

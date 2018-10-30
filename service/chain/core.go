@@ -34,6 +34,10 @@ const (
 	GetByRange = "getByRange" // startKey, endKey
 	QueryResult = "queryResult"
 
+	QueryPrivateData = "getPrivateData"
+	WritePrivateData = "writePrivateData"
+	GetPrivateByRange = "getPrivateByRange" // startKey, endKey
+
 )
 
 type BlockChain struct {}

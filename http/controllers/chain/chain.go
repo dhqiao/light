@@ -164,3 +164,43 @@ func GetAllIdentities(c *gin.Context)  {
 	SendResponse(c, nil, rst)
 }
 
+
+
+func GetPrivate(c *gin.Context) {
+	collection := c.Query("collection")
+	key := c.Query("key")
+	blockChain := &chain.BlockChain{}
+	fmt.Println(">>>>>>>>>>>>>>>>>", key)
+	rst, err := blockChain.GetPrivate(collection, key)
+	if err != nil {
+		SendResponse(c, nil, err.Error())
+	}
+	SendResponse(c, nil, rst)
+}
+
+func SetPrivate(c *gin.Context) {
+	collection := c.Query("collection")
+	key := c.Query("key")
+	value := c.Query("value")
+	blockChain := &chain.BlockChain{}
+	fmt.Println("=-----------set value-----------", key, value)
+	rst, err := blockChain.SetPrivate(collection, key, value)
+	if err != nil {
+		SendResponse(c, nil, err.Error())
+	}
+	SendResponse(c, nil, rst)
+}
+
+
+// 获取两个key之间的数据
+func GetPrivateByRange(c *gin.Context) {
+	collection := c.Query("collection")
+	startKey := c.Query("startKey")
+	endKey := c.Query("endKey")
+	blockChain := &chain.BlockChain{}
+	rst, err := blockChain.GetPrivateByRange(collection, startKey, endKey)
+	if err != nil {
+		SendResponse(c, nil, err.Error())
+	}
+	SendResponse(c, nil, rst)
+}

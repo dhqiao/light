@@ -70,6 +70,9 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 		blockChain.GET("queryResult", chain.QueryResult)
 		blockChain.GET("test", chain.Test)
 
+		blockChain.GET("getPrivate", chain.GetPrivate)
+		blockChain.GET("setPrivate", chain.SetPrivate)
+		blockChain.GET("getPrivateByRange", chain.GetPrivateByRange)
 
 	}
 
