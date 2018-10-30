@@ -350,6 +350,12 @@ func call(channelClient *channel.Client,request channel.Request) (channel.Respon
 		return channelClient.Execute(request)
 	case QueryResult:
 		return channelClient.Query(request)
+	case QueryPrivateData:
+		return channelClient.Query(request)
+	case WritePrivateData:
+		return channelClient.Execute(request)
+	case GetPrivateByRange:
+		return channelClient.Query(request)
 
 	}
 	return channel.Response{}, errors.New("call unknown func: " + request.Fcn)
