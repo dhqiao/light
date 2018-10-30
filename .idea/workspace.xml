@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d957b897-5dc9-4b7b-8a8f-843dcfd612c7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/chain/core.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/chain/core.go" afterDir="false" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,20 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="private_data_test_config.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/conf/private_data_test_config.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="32" selection-start-column="3" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/smart_contract/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="381" column="27" lean-forward="true" selection-start-line="381" selection-start-column="27" selection-end-line="381" selection-end-column="27" />
+            <state relative-caret-position="632">
+              <caret line="114" column="87" selection-start-line="114" selection-start-column="75" selection-end-line="114" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -39,17 +29,8 @@
       <file leaf-file-name="private.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/chain/private.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chain.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/http/controllers/chain/chain.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7">
-              <caret line="182" column="23" selection-start-line="182" selection-start-column="20" selection-end-line="182" selection-end-column="23" />
+            <state relative-caret-position="133">
+              <caret line="7" column="47" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -57,8 +38,8 @@
       <file leaf-file-name="route.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/http/route/route.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="73" column="46" lean-forward="true" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
+            <state relative-caret-position="292">
+              <caret line="72" column="34" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -66,17 +47,53 @@
       <file leaf-file-name="config.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/chain/config.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+            <state relative-caret-position="494">
+              <caret line="26" column="61" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="core.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.yaml.private" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/service/chain/config.yaml.private">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="76" column="30" lean-forward="true" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="core.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/chain/core.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="354" column="26" lean-forward="true" selection-start-line="354" selection-start-column="26" selection-end-line="354" selection-end-column="26" />
+            <state relative-caret-position="290">
+              <caret line="360" column="47" selection-start-line="360" selection-start-column="43" selection-end-line="360" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chclient.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric-sdk-go/pkg/client/channel/chclient.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="107" column="18" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="events_cc.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric-sdk-go/pkg/fab/ccpackager/gopackager/testdata/src/github.com/events_cc/events_cc.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="12">
+              <caret line="86" column="28" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="packager_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric-sdk-go/pkg/fab/ccpackager/gopackager/packager_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -84,26 +101,8 @@
       <file leaf-file-name="interfaces.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric/core/chaincode/shim/interfaces.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="167" column="4" selection-start-line="167" selection-start-column="4" selection-end-line="167" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mockstub.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric/core/chaincode/shim/mockstub.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="152" column="22" selection-start-line="152" selection-start-column="22" selection-end-line="152" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chaincode.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric/core/chaincode/shim/chaincode.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="455" column="33" selection-start-line="455" selection-start-column="33" selection-end-line="455" selection-end-column="33" />
+            <state relative-caret-position="62">
+              <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -122,9 +121,17 @@
       <find>PutData</find>
       <find>PutPrivateData</find>
       <find>GetHistory</find>
-      <find>history</find>
       <find>write</find>
+      <find>getPrivateData</find>
+      <find>Invalid invoke function name</find>
+      <find>writePrivateData</find>
+      <find>history</find>
+      <find>GetChannelID</find>
+      <find>ordererOrganizations</find>
     </findStrings>
+    <dirStrings>
+      <dir>C:\code\Go\src\github.com\hyperledger\fabric-sdk-go</dir>
+    </dirStrings>
   </component>
   <component name="GOROOT" path="C:\Go" />
   <component name="Git.Settings">
@@ -169,6 +176,7 @@
         <option value="$PROJECT_DIR$/config/conf/private_data_test_config.json" />
         <option value="$PROJECT_DIR$/library/smart_contract/main.go" />
         <option value="$PROJECT_DIR$/service/chain/core.go" />
+        <option value="$PROJECT_DIR$/service/chain/config.yaml.private" />
       </list>
     </option>
   </component>
@@ -244,6 +252,131 @@
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="chain" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="light" type="b2602c69:ProjectViewProjectNode" />
+              <item name="light" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="crypto-config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="light" type="b2602c69:ProjectViewProjectNode" />
+              <item name="light" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="crypto-config" type="462c0819:PsiDirectoryNode" />
+              <item name="peerOrganizations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="light" type="b2602c69:ProjectViewProjectNode" />
+              <item name="light" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="crypto-config" type="462c0819:PsiDirectoryNode" />
+              <item name="peerOrganizations" type="462c0819:PsiDirectoryNode" />
+              <item name="member2.example.com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="light" type="b2602c69:ProjectViewProjectNode" />
+              <item name="light" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="crypto-config" type="462c0819:PsiDirectoryNode" />
+              <item name="peerOrganizations" type="462c0819:PsiDirectoryNode" />
+              <item name="member2.example.com" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="light" type="b2602c69:ProjectViewProjectNode" />
+              <item name="light" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="crypto-config" type="462c0819:PsiDirectoryNode" />
+              <item name="peerOrganizations" type="462c0819:PsiDirectoryNode" />
+              <item name="member2.example.com" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="Admin@member2.example.com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="light" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="light" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;light&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+            </path>
+            <path>
+              <item name="light" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;light&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="light" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;light&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="light" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;light&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
+              <item name="hyperledger" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="light" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;light&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
+              <item name="hyperledger" type="462c0819:PsiDirectoryNode" />
+              <item name="fabric-sdk-go" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="light" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;light&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
+              <item name="hyperledger" type="462c0819:PsiDirectoryNode" />
+              <item name="fabric-sdk-go" type="462c0819:PsiDirectoryNode" />
+              <item name="pkg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="light" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;light&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
+              <item name="hyperledger" type="462c0819:PsiDirectoryNode" />
+              <item name="fabric-sdk-go" type="462c0819:PsiDirectoryNode" />
+              <item name="pkg" type="462c0819:PsiDirectoryNode" />
+              <item name="fab" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="light" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;light&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
+              <item name="hyperledger" type="462c0819:PsiDirectoryNode" />
+              <item name="fabric-sdk-go" type="462c0819:PsiDirectoryNode" />
+              <item name="pkg" type="462c0819:PsiDirectoryNode" />
+              <item name="fab" type="462c0819:PsiDirectoryNode" />
+              <item name="ccpackager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="light" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;light&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
+              <item name="hyperledger" type="462c0819:PsiDirectoryNode" />
+              <item name="fabric-sdk-go" type="462c0819:PsiDirectoryNode" />
+              <item name="pkg" type="462c0819:PsiDirectoryNode" />
+              <item name="fab" type="462c0819:PsiDirectoryNode" />
+              <item name="ccpackager" type="462c0819:PsiDirectoryNode" />
+              <item name="gopackager" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -265,6 +398,11 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\code\Go\src\light\service\chain" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -380,10 +518,11 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2987897" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
@@ -392,23 +531,22 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962293" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="File Transfer" order="7" visible="true" weight="0.32952693" />
+      <window_info anchor="bottom" id="File Transfer" order="8" visible="true" weight="0.32952693" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,32 +576,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric-sdk-go/pkg/client/channel/invoke/selectendorsehandler.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2002">
-          <caret line="194" column="34" selection-start-line="194" selection-start-column="5" selection-end-line="194" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric-sdk-go/pkg/client/channel/invoke/txnhandler.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4700">
-          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric-sdk-go/pkg/client/channel/invoke/api.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1095" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric-sdk-go/pkg/client/msp/client.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="164" column="31" selection-start-line="164" selection-start-column="17" selection-end-line="164" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric-sdk-go/pkg/client/msp/identity.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -704,13 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/chain/config.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/conf/private_data_test_config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -746,34 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric/core/chaincode/shim/interfaces.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="167" column="4" selection-start-line="167" selection-start-column="4" selection-end-line="167" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/smart_contract/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="381" column="27" lean-forward="true" selection-start-line="381" selection-start-column="27" selection-end-line="381" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/chain/private.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/route/route.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="73" column="46" lean-forward="true" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http/controllers/chain/chain.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7">
@@ -781,10 +858,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/service/chain/private.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="47" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric-sdk-go/pkg/client/channel/chclient.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="107" column="18" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric-sdk-go/pkg/fab/ccpackager/gopackager/testdata/src/github.com/events_cc/events_cc.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="86" column="28" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric-sdk-go/pkg/fab/ccpackager/gopackager/packager_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/service/chain/core.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="354" column="26" lean-forward="true" selection-start-line="354" selection-start-column="26" selection-end-line="354" selection-end-column="26" />
+        <state relative-caret-position="290">
+          <caret line="360" column="47" selection-start-line="360" selection-start-column="43" selection-end-line="360" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric/core/chaincode/shim/interfaces.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/smart_contract/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="114" column="87" selection-start-line="114" selection-start-column="75" selection-end-line="114" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/route/route.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="72" column="34" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/chain/config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="61" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/chain/config.yaml.private">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="76" column="30" lean-forward="true" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
         </state>
       </provider>
     </entry>
