@@ -24,7 +24,7 @@ const (
 	ChainCodeID = "mycc"
 	ChannelID = "mychannel" // channel id
 	UserName = "Admin"
-	AimOrg = "member1.example.com"
+	AimOrg = "member2.example.com"
 
 	// next words are chain code has supplied functions' name
 	Query = "query"

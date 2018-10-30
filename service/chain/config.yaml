@@ -2,7 +2,7 @@ name: "default-network"
 description: "The network description"
 version: 1.0.0
 client:
-  organization: member1.example.com
+  organization: member2.example.com
   logging:
     level: info
   cryptoconfig:
@@ -24,15 +24,15 @@ client:
     systemCertPool: true
     client:
       key:
-        path: service/crypto-config/peerOrganizations/member1.example.com/users/Admin@member1.example.com/tls/client.key
+        path: service/crypto-config/peerOrganizations/member2.example.com/users/Admin@member2.example.com/tls/client.key
         #path: /opt/app/fabric/cli/user/member1.example.com/Admin-peer0.member1.example.com/tls/client.key
       cert:
-        path: service/crypto-config/peerOrganizations/member1.example.com/users/Admin@member1.example.com/tls/client.crt
+        path: service/crypto-config/peerOrganizations/member2.example.com/users/Admin@member2.example.com/tls/client.crt
         #path: /opt/app/fabric/cli/user/member1.example.com/Admin-peer0.member1.example.com/tls/client.crt
 channels:
   mychannel:
     peers:
-      peer0.member1.example.com:
+      peer0.member2.example.com:
         endorsingPeer: true
         chaincodeQuery: true
         ledgerQuery: true
@@ -47,12 +47,12 @@ channels:
           maxBackoff: 5s
           backoffFactor: 2.0
 organizations:
-  member1.example.com:
-    mspid: peers.member1.example.com
-    cryptoPath: peerOrganizations/member1.example.com/users/Admin@member1.example.com/msp/
+  member2.example.com:
+    mspid: peers.member2.example.com
+    cryptoPath: peerOrganizations/member2.example.com/users/Admin@member2.example.com/msp/
     #cryptoPath: msp/
     peers:
-      - peer0.member1.example.com
+      - peer0.member2.example.com
 orderers:
   orderer0.member1.example.com:
     url: orderer0.member1.example.com:7050
@@ -67,18 +67,18 @@ orderers:
       path: service/crypto-config/ordererOrganizations/member1.example.com/tlsca/tlsca.member1.example.com-cert.pem
       #path: /opt/app/fabric/cli/user/member1.example.com/Admin-peer0.member1.example.com/tlsca.member1.example.com-cert.pem
 peers:
-  peer0.member1.example.com:
-    url: peer0.member1.example.com:7051
-    eventUrl: peer0.member1.example.com:7053
+  peer0.member2.example.com:
+    url: peer0.member2.example.com:7051
+    eventUrl: peer0.member2.example.com:7053
     grpcOptions:
-      ssl-target-name-override: peer0.member1.example.com
+      ssl-target-name-override: peer0.member2.example.com
       keep-alive-credentialStore: 0s
       keep-alive-timeout: 20s
       keep-alive-permit: false
       fail-fast: false
       allow-insecure: false
     tlsCACerts:
-      path: service/crypto-config/peerOrganizations/member1.example.com/peers/peer0.member1.example.com/tls/ca.crt
+      path: service/crypto-config/peerOrganizations/member2.example.com/peers/peer0.member2.example.com/tls/ca.crt
       #path: /opt/app/fabric/cli/user/member1.example.com/Admin-peer0.member1.example.com/tls/ca.crt
 
 entityMatchers:
