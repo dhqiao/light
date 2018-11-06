@@ -279,6 +279,7 @@ func ParseBlockInfo(block *common.Block) (*BlockInfo, error ){
 	if err != nil {
 		return nil, err
 	}
+	fmt.Println("......in,............")
 	httpResp, err := http.Post("http://127.0.0.1:7059/protolator/decode/common.Block", "application/octet-stream", bytes.NewReader(b))
 	resBody, err := ioutil.ReadAll(httpResp.Body)
 
