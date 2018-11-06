@@ -1,5 +1,8 @@
 package chain
 
+/**
+ * test private data for fabric 1.2 new feature
+ */
 // 数据获取
 func (blockChain *BlockChain) GetPrivate(collection, key string) (BlockChainResponse, error) {
 	var args [][]byte

@@ -11,6 +11,10 @@ const (
 	ErrorCode = 0
 )
 
+// 临时变量，因为使用了一个递归函数，返回值有点问题
+var listRst []interface{}
+
+// define block info
 type BlockInfo struct {
 	TransactionData      []TransactionData `json:"transction_list"`
 	Number               uint64            `json:"number,omitempty"`
@@ -18,6 +22,7 @@ type BlockInfo struct {
 	DataHash             string            `json:"data_hash,omitempty"`
 } 
 
+// define transaction struct for return data
 type TransactionData struct {
 	Function string   `json:"function"`
 	Key string        `json:"key"`
@@ -77,8 +82,6 @@ channel_header: {
 	version: 0
 },
 */
-
-var listRst []interface{}
 
 func findDataFromJsonByte(jsonStr []byte, findKey string) ([]interface{}, error) {
 	jsonMap := make(map[string]interface{})
