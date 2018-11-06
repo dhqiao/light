@@ -279,7 +279,6 @@ func ParseBlockInfo(block *common.Block) (BlockInfo, error ){
 	if err != nil {
 		return blockInfo, err
 	}
-	fmt.Println("......in,............")
 	httpResp, err := http.Post("http://127.0.0.1:7059/protolator/decode/common.Block", "application/octet-stream", bytes.NewReader(b))
 	resBody, err := ioutil.ReadAll(httpResp.Body)
 
@@ -288,7 +287,6 @@ func ParseBlockInfo(block *common.Block) (BlockInfo, error ){
 	if err != nil{
 		fmt.Println("<<<<<<<<<<<<<<<<<<<<decode json error")
 	}
-	fmt.Println(".............out .............")
 	blockInfo.PreviousHash = encodeToString(block.Header.PreviousHash)
 	blockInfo.DataHash = encodeToString(block.Header.DataHash)
 	blockInfo.TransactionData = transactionList

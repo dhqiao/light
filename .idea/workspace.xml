@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d957b897-5dc9-4b7b-8a8f-843dcfd612c7" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/service/chain/ledger.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/chain/ledger.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/chain/utils.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/chain/utils.go" afterDir="false" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -50,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ledger.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ledger.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/service/chain/ledger.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+            <state relative-caret-position="77">
+              <caret line="148" column="77" selection-start-line="148" selection-start-column="77" selection-end-line="148" selection-end-column="77" />
               <folding>
                 <element signature="e#15#125#0" expanded="true" />
               </folding>
@@ -107,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="utils.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/chain/utils.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="287" column="18" lean-forward="true" selection-start-line="287" selection-start-column="18" selection-end-line="287" selection-end-column="18" />
+              <caret line="275" column="12" lean-forward="true" selection-start-line="275" selection-start-column="12" selection-end-line="275" selection-end-column="12" />
               <folding>
                 <element signature="e#15#93#0" expanded="true" />
               </folding>
@@ -195,8 +196,8 @@
         <option value="$PROJECT_DIR$/service/chain/config.yaml.private" />
         <option value="$PROJECT_DIR$/service/chain/core.go" />
         <option value="$PROJECT_DIR$/service/chain/private.go" />
-        <option value="$PROJECT_DIR$/service/chain/ledger.go" />
         <option value="$PROJECT_DIR$/service/chain/utils.go" />
+        <option value="$PROJECT_DIR$/service/chain/ledger.go" />
       </list>
     </option>
   </component>
@@ -1016,22 +1017,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/chain/ledger.go">
+    <entry file="file://$PROJECT_DIR$/service/chain/utils.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+        <state relative-caret-position="300">
+          <caret line="275" column="12" lean-forward="true" selection-start-line="275" selection-start-column="12" selection-end-line="275" selection-end-column="12" />
           <folding>
-            <element signature="e#15#125#0" expanded="true" />
+            <element signature="e#15#93#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/chain/utils.go">
+    <entry file="file://$PROJECT_DIR$/service/chain/ledger.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="287" column="18" lean-forward="true" selection-start-line="287" selection-start-column="18" selection-end-line="287" selection-end-column="18" />
+        <state relative-caret-position="77">
+          <caret line="148" column="77" selection-start-line="148" selection-start-column="77" selection-end-line="148" selection-end-column="77" />
           <folding>
-            <element signature="e#15#93#0" expanded="true" />
+            <element signature="e#15#125#0" expanded="true" />
           </folding>
         </state>
       </provider>
