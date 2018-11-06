@@ -273,11 +273,11 @@ func changeDataToSlice(jsonData interface{}) []interface{} {
 }
 
 // 解析区块数据
-func ParseBlockInfo(block *common.Block) (*BlockInfo, error ){
-	var blockInfo *BlockInfo
+func ParseBlockInfo(block *common.Block) (BlockInfo, error ){
+	var blockInfo BlockInfo
 	b, err := proto.Marshal(block)
 	if err != nil {
-		return nil, err
+		return blockInfo, err
 	}
 	fmt.Println("......in,............")
 	httpResp, err := http.Post("http://127.0.0.1:7059/protolator/decode/common.Block", "application/octet-stream", bytes.NewReader(b))
@@ -288,6 +288,7 @@ func ParseBlockInfo(block *common.Block) (*BlockInfo, error ){
 	if err != nil{
 		fmt.Println("<<<<<<<<<<<<<<<<<<<<decode json error")
 	}
+	fmt.Println(".............out .............")
 	blockInfo.PreviousHash = encodeToString(block.Header.PreviousHash)
 	blockInfo.DataHash = encodeToString(block.Header.DataHash)
 	blockInfo.TransactionData = transactionList
