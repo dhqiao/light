@@ -1,7 +1,6 @@
 package chain
 
 import (
-	"github.com/hyperledger/fabric-sdk-go/third_party/github.com/hyperledger/fabric/protos/utils"
 	"github.com/hyperledger/fabric-sdk-go/pkg/client/channel"
 	"net/http"
 	"bytes"
@@ -36,11 +35,7 @@ func (blockChain *BlockChain)QueryBlockByTxID(txID string) (BlockChainResponse, 
 
 
 func (blockChain *BlockChain)QueryBlockByHash(blockHash string) (BlockChainResponse, error) {
-	channelProvider := FabSDK.ChannelContext(ChannelID,
-		fabsdk.WithUser(UserName),
-		fabsdk.WithOrg(AimOrg))
-
-	client, err := ledger.New(channelProvider)
+	client, err := getLedgerClient()
 
 	if err != nil {
 		return BlockChainResponse{"", "", channel.Response{}}, err
@@ -51,21 +46,13 @@ func (blockChain *BlockChain)QueryBlockByHash(blockHash string) (BlockChainRespo
 		return BlockChainResponse{"", "", channel.Response{}}, err
 	}
 	block, err := client.QueryBlockByHash(blockHashByte)
-	//block, err := client.QueryBlockByTxID(id)
-	fmt.Println("...........block...........", block, blockHash)
-
-	fmt.Println("...........block1...........", string(block.Data.Data[0]), len(block.Data.Data))
-	fmt.Println("...........block-len...........", len(block.Data.Data))
-	fmt.Println("...........block-byte2Json...........", byte2Json(block.Data.Data[0]))
-
-
-
-	fmt.Println("...........block3...........", string(block.Metadata.Metadata[0]))
+	// if err
+	blockInfo, err := ParseBlockInfo(block)
 
 	if err != nil {
 		return BlockChainResponse{"", "", channel.Response{}}, err
 	}
-	return BlockChainResponse{block, "", channel.Response{}}, nil
+	return BlockChainResponse{blockInfo, "", channel.Response{}}, nil
 }
 
 func (blockChain *BlockChain)QueryBlock(blockNum string) (BlockChainResponse, error) {
@@ -75,47 +62,12 @@ func (blockChain *BlockChain)QueryBlock(blockNum string) (BlockChainResponse, er
 		return BlockChainResponse{"", "", channel.Response{}}, err
 	}
 	block, err := ledgerClient.QueryBlock(blockNo)
-	dataa := block.Metadata.Metadata
-	fmt.Println("...........dataa[0]...........", dataa[0])
-	fmt.Println("...........dataa[0].string...........", string(dataa[0]))
-	fmt.Println("...........dataa[0][0].string...........", string(dataa[0][0]))
-
-
-
-	rst := make(map[string]interface{})
-	//txsFltr := util.TxValidationFlags(block.Metadata.Metadata[common.BlockMetadataIndex_TRANSACTIONS_FILTER])
-	//fmt.Println("txsFltr", txsFltr)
-	for _, r := range block.Data.Data {
-		tx, _ := getTxPayload1(r)
-		if tx != nil {
-			chdr, err := utils.UnmarshalChannelHeader(tx.Header.ChannelHeader)
-			rst["chdr"] = chdr
-			if err != nil {
-				fmt.Print("Error extracting channel header\n")
-			}
-			//getChainCodeEvents1(r)
-
-		}
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-	rst["block"] = block
-
-
+	// if err
+	blockInfo, err := ParseBlockInfo(block)
 	if err != nil {
 		return BlockChainResponse{"", "", channel.Response{}}, err
 	}
-	return BlockChainResponse{rst, "", channel.Response{}}, nil
+	return BlockChainResponse{blockInfo, "", channel.Response{}}, nil
 }
 
 func (blockChain *BlockChain)QueryTransaction(txID string) (BlockChainResponse, error) {
@@ -166,6 +118,7 @@ func (blockChain *BlockChain) Test (txID string) (BlockChainResponse, error){
 	return BlockChainResponse{blockInfo, "", channel.Response{}}, err
 }
 
+// 写死了
 func GetLedgerClient() (*ledger.Client, error) {
 	channelProvider := FabSDK.ChannelContext(ChannelID,
 		fabsdk.WithUser(UserName),
