@@ -83,13 +83,7 @@ channel_header: {
 },
 */
 
-func findDataFromJsonByte(jsonStr []byte, findKey string) ([]interface{}, error) {
-	jsonMap := make(map[string]interface{})
-	json.Unmarshal(jsonStr, &jsonMap)
-	findDataFromJson(jsonMap, findKey)
-	return listRst, nil
-}
-
+// 解析区块数据
 func decodeBlockJson(jsonStr []byte) ([]TransactionData, error) {
 	jsonMap := make(map[string]interface{})
 	json.Unmarshal(jsonStr, &jsonMap)
