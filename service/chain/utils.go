@@ -5,6 +5,12 @@ import (
 	"fmt"
 	"github.com/pkg/errors"
 	"encoding/base64"
+	"net/http"
+	"bytes"
+	"io/ioutil"
+	"github.com/golang/protobuf/proto"
+	"github.com/hyperledger/fabric-sdk-go/third_party/github.com/hyperledger/fabric/protos/common"
+
 )
 
 const (
@@ -264,4 +270,26 @@ func changeDataToSlice(jsonData interface{}) []interface{} {
 		return nil
 	}()
 	return jsonSlice
+}
+
+// 解析区块数据
+func ParseBlockInfo(block *common.Block) (*BlockInfo, error ){
+	var blockInfo *BlockInfo
+	b, err := proto.Marshal(block)
+	if err != nil {
+		return nil, err
+	}
+	httpResp, err := http.Post("http://127.0.0.1:7059/protolator/decode/common.Block", "application/octet-stream", bytes.NewReader(b))
+	resBody, err := ioutil.ReadAll(httpResp.Body)
+
+	httpResp.Body.Close()
+	transactionList, err := decodeBlockJson(resBody)
+	if err != nil{
+		fmt.Println("<<<<<<<<<<<<<<<<<<<<decode json error")
+	}
+	blockInfo.PreviousHash = encodeToString(block.Header.PreviousHash)
+	blockInfo.DataHash = encodeToString(block.Header.DataHash)
+	blockInfo.TransactionData = transactionList
+	blockInfo.Number = block.Header.Number
+	return blockInfo, nil
 }

@@ -27,26 +27,7 @@ func (blockChain *BlockChain)QueryBlockByTxID(txID string) (BlockChainResponse, 
 	}
 	//header, _ := json.Marshal(block.Header)
 
-	b, err := proto.Marshal(block)
-	if err != nil {
-		return BlockChainResponse{"", "", channel.Response{}}, err
-	}
-	httpResp, err := http.Post("http://127.0.0.1:7059/protolator/decode/common.Block", "application/octet-stream", bytes.NewReader(b))
-
-	resBody, err := ioutil.ReadAll(httpResp.Body)
-
-	httpResp.Body.Close()
-
-	transactionList, err := decodeBlockJson(resBody)
-	var blockInfo BlockInfo
-	if err != nil{
-		fmt.Println("<<<<<<<<<<<<<<<<<<<<decode json error")
-	}
-	blockInfo.PreviousHash = encodeToString(block.Header.PreviousHash)
-	blockInfo.DataHash = encodeToString(block.Header.DataHash)
-	blockInfo.TransactionData = transactionList
-	blockInfo.Number = block.Header.Number
-
+	blockInfo, err := ParseBlockInfo(block)
 	if err != nil {
 		return BlockChainResponse{"", "", channel.Response{}}, err
 	}
@@ -215,4 +196,3 @@ func GetLedgerClient() (*ledger.Client, error) {
 
 	return  ledger.New(channelProvider)
 }
-
