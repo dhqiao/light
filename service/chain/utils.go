@@ -145,8 +145,10 @@ func decodeChannelHeader(channelHeader interface{}) (string, string, string) {
 
 // function key value
 func decodeChaincodeSpec(chaincodeSpec interface{}) (string, []string, string ) {
+	var values []string
+
 	if chaincodeSpec == nil {
-		return "", "", ""
+		return "", values, ""
 	}
 	chaincodeSpecMap, ok := chaincodeSpec.(map[string]interface{})
 	if ok {
@@ -159,7 +161,6 @@ func decodeChaincodeSpec(chaincodeSpec interface{}) (string, []string, string ) 
 					argsList, ok := args.([]interface{})
 
 					if ok {
-						var values []string
 						// del
 						if len(argsList) == 2 {
 							values = append(values, decodeString(argsList[1].(string)))
@@ -185,7 +186,7 @@ func decodeChaincodeSpec(chaincodeSpec interface{}) (string, []string, string ) 
 		}
 	}
 
-	return "", "", ""
+	return "", values, ""
 }
 
 func decodeString(str string) string {
