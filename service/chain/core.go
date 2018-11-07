@@ -9,8 +9,6 @@ import (
 	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/fab"
 	"fmt"
 	"github.com/hyperledger/fabric-sdk-go/pkg/client/ledger"
-	"github.com/hyperledger/fabric-sdk-go/third_party/github.com/hyperledger/fabric/protos/common"
-	"github.com/hyperledger/fabric-sdk-go/third_party/github.com/hyperledger/fabric/protos/utils"
 )
 
 const (
@@ -180,32 +178,4 @@ func getLedgerClient() (*ledger.Client, error) {
 		fabsdk.WithOrg(AimOrg))
 
 	return ledger.New(channelProvider)
-}
-
-func byte2Json(data []byte) interface{} {
-	var rst interface{}
-	json.Unmarshal(data, &rst)
-	fmt.Println("-----------------------", rst)
-	if rst == nil {
-		//rst = string(response.Payload[:])
-	}
-	return rst
-}
-
-func getTxPayload1(tdata []byte) (*common.Payload, error) {
-	if tdata == nil {
-		return nil, errors.New("Cannot extract payload from nil transaction")
-	}
-
-	if env, err := utils.GetEnvelopeFromBlock(tdata); err != nil {
-		return nil, fmt.Errorf("Error getting tx from block(%s)", err)
-	} else if env != nil {
-		// get the payload from the envelope
-		payload, err := utils.GetPayload(env)
-		if err != nil {
-			return nil, fmt.Errorf("Could not extract payload from envelope, err %s", err)
-		}
-		return payload, nil
-	}
-	return nil, nil
 }
