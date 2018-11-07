@@ -197,3 +197,17 @@ func GetPrivateByRange(c *gin.Context) {
 	}
 	SendResponse(c, nil, rst)
 }
+
+func WriteHouse(c *gin.Context)  {
+	id := c.Query("id")
+	location := c.Query("location")
+	owner := c.Query("owner")
+
+	blockChain := &chain.BlockChain{}
+	fmt.Println("=-----------set value-----------", owner, location, id)
+	rst, err := blockChain.WriteHouse(id, location, owner)
+	if err != nil {
+		SendResponse(c, nil, err.Error())
+	}
+	SendResponse(c, nil, rst)
+}

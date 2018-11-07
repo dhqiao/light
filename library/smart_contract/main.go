@@ -28,6 +28,12 @@ func ToChaincodergs(args ...string) [][]byte {
 type Chaincode struct {
 }
 
+type House struct {
+	ID string `json:"id"`
+	Location string `json:"location"`
+	Owner string `json:"owner"`
+}
+
 //{"Args":["attr", "name"]}'
 func (t *Chaincode) attr(stub shim.ChaincodeStubInterface, args []string) pb.Response {
 	if len(args) != 1 {
@@ -275,6 +281,18 @@ func (t *Chaincode) write(stub shim.ChaincodeStubInterface, key, value string) p
 	return shim.Success(nil)
 }
 
+//{"Args":["write","key","value"]}'
+func (t *Chaincode) writeHouse(stub shim.ChaincodeStubInterface, id, location, owner string) pb.Response {
+	key := id
+	fmt.Printf("writeHouse  write %s, value is %s\n", key, id)
+	var house = House{id, location, owner}
+	houseBytes, _ := json.Marshal(house)
+	if err := stub.PutState(key, houseBytes); err != nil {
+		return shim.Error("write fail " + err.Error())
+	}
+	return shim.Success(nil)
+}
+
 // 隐私数据 1.2 新特性
 func (t *Chaincode) writePrivateData(stub shim.ChaincodeStubInterface, collection, key, value string) pb.Response {
 	fmt.Println("write private data collection s%, key is s%, value is s% \n", collection,  key, value)
@@ -365,6 +383,13 @@ func (t *Chaincode) Invoke(stub shim.ChaincodeStubInterface) pb.Response {
 			return shim.Error("parametes's number is wrong")
 		}
 		return t.write(stub, args[0], args[1])
+		//创建一个key，并写入key的值 House，处理比write复杂
+	case "writeHouse": //写入
+		if len(args) != 3 {
+			return shim.Error("writeHouse parametes's number is wrong")
+		}
+		return t.writeHouse(stub, args[0], args[1], args[2])
+
 		//创建一个key隐私数据，并写入key的值
 	case "writePrivateData": //写入
 		if len(args) != 3 {

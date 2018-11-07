@@ -30,6 +30,9 @@ const (
 	WritePrivateData = "writePrivateData"
 	GetPrivateByRange = "getPrivateByRange" // startKey, endKey
 
+	// business
+	WriteHouse = "writeHouse"
+
 )
 
 type BlockChain struct {}
@@ -159,7 +162,8 @@ func call(channelClient *channel.Client,request channel.Request) (channel.Respon
 		return channelClient.Execute(request)
 	case GetPrivateByRange:
 		return channelClient.Query(request)
-
+	case WriteHouse:
+		return channelClient.Execute(request)
 	}
 	return channel.Response{}, errors.New("call unknown func: " + request.Fcn)
 }
