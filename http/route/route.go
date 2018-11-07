@@ -53,14 +53,16 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 
 	blockChain := g.Group("/block/chain")
 	{
+		// base function
 		blockChain.GET("get", chain.Get)
 		blockChain.GET("set", chain.Set)
 		blockChain.GET("history", chain.History)
+
+		// block info
 		blockChain.GET("queryBlockByTxID", chain.QueryBlockByTxID)
 		blockChain.GET("queryBlock", chain.QueryBlock)
 		blockChain.GET("queryTransaction", chain.QueryTransaction)
 		blockChain.GET("queryBlockByHash", chain.QueryBlockByHash)
-		blockChain.GET("getBlockchainInfo", chain.GetBlockchainInfo)
 		blockChain.GET("queryConfig", chain.QueryConfig)
 		blockChain.GET("queryInfo", chain.QueryInfo)
 		blockChain.GET("getAllIdentities", chain.GetAllIdentities)
@@ -70,9 +72,13 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 		blockChain.GET("queryResult", chain.QueryResult)
 		blockChain.GET("test", chain.Test)
 
+		// private test
 		blockChain.GET("getPrivate", chain.GetPrivate)
 		blockChain.GET("setPrivate", chain.SetPrivate)
 		blockChain.GET("getPrivateByRange", chain.GetPrivateByRange)
+
+		// business
+		blockChain.GET("writeHouse", chain.WriteHouse)
 
 	}
 
