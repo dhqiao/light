@@ -17,7 +17,7 @@ import (
 
 func (blockChain *BlockChain)QueryBlockByTxID(txID string) (BlockChainResponse, error) {
 
-	client, err := GetLedgerClient()
+	client, err := getLedgerClient()
 	// if err...
 	block, err := client.QueryBlockByTxID(fab.TransactionID(txID))
 	if err != nil {
@@ -116,13 +116,4 @@ func (blockChain *BlockChain) Test (txID string) (BlockChainResponse, error){
 		return BlockChainResponse{"", "", channel.Response{}}, err
 	}
 	return BlockChainResponse{blockInfo, "", channel.Response{}}, err
-}
-
-// 写死了
-func GetLedgerClient() (*ledger.Client, error) {
-	channelProvider := FabSDK.ChannelContext(ChannelID,
-		fabsdk.WithUser(UserName),
-		fabsdk.WithOrg(AimOrg))
-
-	return  ledger.New(channelProvider)
 }
