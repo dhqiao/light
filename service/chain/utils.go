@@ -33,7 +33,7 @@ type BlockInfo struct {
 type TransactionData struct {
 	Function string   `json:"function"`
 	Key string        `json:"key"`
-	Value string      `json:"value"`
+	Value []string      `json:"value"`
 	Message string    `json:"message"`
 	Status float64    `json:"status"`
 	Timestamp string  `json:"timestamp"`
@@ -144,7 +144,7 @@ func decodeChannelHeader(channelHeader interface{}) (string, string, string) {
 }
 
 // function key value
-func decodeChaincodeSpec(chaincodeSpec interface{}) (string, string, string ) {
+func decodeChaincodeSpec(chaincodeSpec interface{}) (string, []string, string ) {
 	if chaincodeSpec == nil {
 		return "", "", ""
 	}
@@ -159,12 +159,25 @@ func decodeChaincodeSpec(chaincodeSpec interface{}) (string, string, string ) {
 					argsList, ok := args.([]interface{})
 
 					if ok {
+						var values []string
 						// del
 						if len(argsList) == 2 {
-							return decodeString(argsList[0].(string)), decodeString(argsList[1].(string)), ""
+							values = append(values, decodeString(argsList[1].(string)))
+							return decodeString(argsList[0].(string)), values, ""
 						}
+						/*
 						if len(argsList) == 3 {
-							return decodeString(argsList[0].(string)), decodeString(argsList[1].(string)), decodeString(argsList[2].(string))
+							values = append(values, decodeString(argsList[1].(string)))
+							return decodeString(argsList[0].(string)), values, decodeString(argsList[2].(string))
+						}*/
+						// if len(argsList) > 3 不是设置的key value的形式，而是多值输入
+						if len(argsList) >= 3 {
+							len := len(argsList)
+							index := 1
+							for ; index < len-1; index ++ {
+								values = append(values, decodeString(argsList[index].(string)))
+							}
+							return decodeString(argsList[0].(string)), values, decodeString(argsList[2].(string))
 						}
 					}
 				}
