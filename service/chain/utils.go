@@ -26,6 +26,7 @@ type BlockInfo struct {
 	Number               uint64            `json:"number,omitempty"`
 	PreviousHash         string            `json:"previous_hash,omitempty"`
 	DataHash             string            `json:"data_hash,omitempty"`
+	OriginData           map[string]interface{}            `json:"origin_data,omitempty"`
 } 
 
 // define transaction struct for return data
@@ -291,5 +292,11 @@ func ParseBlockInfo(block *common.Block) (BlockInfo, error ){
 	blockInfo.DataHash = encodeToString(block.Header.DataHash)
 	blockInfo.TransactionData = transactionList
 	blockInfo.Number = block.Header.Number
+
+	// 不需要的时候注释掉
+	jsonMap := make(map[string]interface{})
+	json.Unmarshal(resBody, &jsonMap)
+	blockInfo.OriginData = jsonMap
+
 	return blockInfo, nil
 }
