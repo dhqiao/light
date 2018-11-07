@@ -6,5 +6,5 @@ func (blockChain *BlockChain) WriteHouse(id, location, owner string)  (BlockChai
 	args = append(args, []byte(id))
 	args = append(args, []byte(location))
 	args = append(args, []byte(owner))
-	return blockChain.Request(ChainCodeID, Write, args)
+	return blockChain.Request(ChainCodeID, WriteHouse, args)
 }
