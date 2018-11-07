@@ -307,9 +307,9 @@ func ParseBlockInfo(block *common.Block) (BlockInfo, error ){
 	blockInfo.Number = block.Header.Number
 
 	// 不需要的时候注释掉
-	jsonMap := make(map[string]interface{})
-	json.Unmarshal(resBody, &jsonMap)
-	blockInfo.OriginData = jsonMap
+	//jsonMap := make(map[string]interface{})
+	//json.Unmarshal(resBody, &jsonMap)
+	//blockInfo.OriginData = jsonMap
 
 	return blockInfo, nil
 }
