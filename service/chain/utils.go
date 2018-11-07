@@ -144,11 +144,11 @@ func decodeChannelHeader(channelHeader interface{}) (string, string, string) {
 }
 
 // function key value
-func decodeChaincodeSpec(chaincodeSpec interface{}) (string, []string, string ) {
+func decodeChaincodeSpec(chaincodeSpec interface{}) (string, string, []string ) {
 	var values []string
 
 	if chaincodeSpec == nil {
-		return "", values, ""
+		return "", "", values
 	}
 	chaincodeSpecMap, ok := chaincodeSpec.(map[string]interface{})
 	if ok {
@@ -163,8 +163,7 @@ func decodeChaincodeSpec(chaincodeSpec interface{}) (string, []string, string ) 
 					if ok {
 						// del
 						if len(argsList) == 2 {
-							values = append(values, decodeString(argsList[1].(string)))
-							return decodeString(argsList[0].(string)), values, ""
+							return decodeString(argsList[0].(string)), decodeString(argsList[1].(string)), values
 						}
 						/*
 						if len(argsList) == 3 {
@@ -174,11 +173,11 @@ func decodeChaincodeSpec(chaincodeSpec interface{}) (string, []string, string ) 
 						// if len(argsList) > 3 不是设置的key value的形式，而是多值输入
 						if len(argsList) >= 3 {
 							len := len(argsList)
-							index := 1
-							for ; index < len-1; index ++ {
+							index := 2
+							for ; index < len; index ++ {
 								values = append(values, decodeString(argsList[index].(string)))
 							}
-							return decodeString(argsList[0].(string)), values, decodeString(argsList[2].(string))
+							return decodeString(argsList[0].(string)), decodeString(argsList[1].(string)), values
 						}
 					}
 				}
@@ -186,7 +185,7 @@ func decodeChaincodeSpec(chaincodeSpec interface{}) (string, []string, string ) 
 		}
 	}
 
-	return "", values, ""
+	return "", "", values
 }
 
 func decodeString(str string) string {
