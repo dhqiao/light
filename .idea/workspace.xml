@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d957b897-5dc9-4b7b-8a8f-843dcfd612c7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/chain/utils.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/chain/utils.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/chain/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/chain/config.yaml.private" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/chain/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/chain/init.go" afterDir="false" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,27 +22,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/smart_contract/main.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="msp.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/chain/msp.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-              <folding>
-                <element signature="e#15#139#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ledger.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/chain/ledger.go">
           <provider selected="true" editor-type-id="text-editor">
@@ -51,11 +31,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="init.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/service/chain/init.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="block_chain_config.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/conf/block_chain_config.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="430">
+              <caret line="88" column="46" selection-start-line="88" selection-start-column="46" selection-end-line="88" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="block_chain_config.yaml.private" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/conf/block_chain_config.yaml.private">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/chain/utils.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="311" column="36" lean-forward="true" selection-start-line="311" selection-start-column="36" selection-end-line="311" selection-end-column="36" />
+            <state relative-caret-position="267">
+              <caret line="307" lean-forward="true" selection-start-line="307" selection-end-line="307" />
             </state>
           </provider>
         </entry>
@@ -69,41 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="private.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/chain/private.go">
+      <file leaf-file-name="core.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/chain/core.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="paload.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/chain/paload.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-183">
-              <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="validate.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/chain/validate.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="e#15#114#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chain.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/http/controllers/chain/chain.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="207" column="30" selection-start-line="207" selection-start-column="30" selection-end-line="207" selection-end-column="30" />
+            <state relative-caret-position="437">
+              <caret line="56" column="29" lean-forward="true" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -192,7 +169,6 @@
         <option value="$PROJECT_DIR$/models/init.go" />
         <option value="$PROJECT_DIR$/../github.com/jinzhu/gorm/main.go" />
         <option value="$PROJECT_DIR$/service/chain/config.yaml" />
-        <option value="$PROJECT_DIR$/service/chain/init.go" />
         <option value="$PROJECT_DIR$/config/conf/config.yaml" />
         <option value="$PROJECT_DIR$/service/chain/validate.go" />
         <option value="$PROJECT_DIR$/service/chain/test.go" />
@@ -212,6 +188,9 @@
         <option value="$PROJECT_DIR$/http/route/route.go" />
         <option value="$PROJECT_DIR$/service/chain/business.go" />
         <option value="$PROJECT_DIR$/service/chain/utils.go" />
+        <option value="$PROJECT_DIR$/config/conf/block_chain_config.yaml" />
+        <option value="$PROJECT_DIR$/config/conf/block_chain_config.yaml.private" />
+        <option value="$PROJECT_DIR$/service/chain/init.go" />
       </list>
     </option>
   </component>
@@ -716,20 +695,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric-sdk-go/third_party/github.com/hyperledger/fabric/protos/msp/msp_config.pb.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/route/route.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="57" column="31" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric-sdk-go/third_party/github.com/hyperledger/fabric/protos/utils/commonutils.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -850,13 +815,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/chain/config.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric-sdk-go/third_party/github.com/hyperledger/fabric/protos/common/common.pb.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -895,24 +853,10 @@
     <entry file="file://$PROJECT_DIR$/http/controllers/chain/config.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/chain/init.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service/chain/dashboard.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
           <caret line="38" column="1" lean-forward="true" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/chain/config.yaml.private">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -979,13 +923,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/chain/core.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="56" column="29" lean-forward="true" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http/route/route.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -997,13 +934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="207" column="30" selection-start-line="207" selection-start-column="30" selection-end-line="207" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/chain/business.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -1064,8 +994,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/service/chain/utils.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="311" column="36" lean-forward="true" selection-start-line="311" selection-start-column="36" selection-end-line="311" selection-end-column="36" />
+        <state relative-caret-position="267">
+          <caret line="307" lean-forward="true" selection-start-line="307" selection-end-line="307" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/chain/business.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/chain/core.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="56" column="29" lean-forward="true" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/chain/config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="55" column="9" lean-forward="true" selection-end-line="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/conf/block_chain_config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="88" column="46" selection-start-line="88" selection-start-column="46" selection-end-line="88" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/chain/config.yaml.private">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="73" column="33" selection-end-line="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/conf/block_chain_config.yaml.private">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/chain/init.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>

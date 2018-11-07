@@ -11,7 +11,7 @@ var FabSDK *fabsdk.FabricSDK
 func init()  {
 
 	//读取配置文件，创建SDK
-	configProvider := config.FromFile("service/chain/config.yaml")
+	configProvider := config.FromFile("config/conf/block_chain_config.yaml")
 	var err error
 	FabSDK, err = fabsdk.New(configProvider)
 	if err != nil {
