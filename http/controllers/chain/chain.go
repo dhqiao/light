@@ -127,13 +127,6 @@ func QueryBlockByHash(c *gin.Context)  {
 	SendResponse(c, nil, rst)
 }
 
-// 没有使用
-func GetBlockchainInfo(c *gin.Context)  {
-	blockChain := &chain.BlockChain{}
-	rst := blockChain.GetBlockchainInfo()
-	SendResponse(c, nil, rst)
-}
-
 // 获取配置信息 只能到order节点和锚点peer
 func QueryConfig(c *gin.Context)  {
 	blockChain := &chain.BlockChain{}
