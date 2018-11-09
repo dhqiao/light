@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d957b897-5dc9-4b7b-8a8f-843dcfd612c7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/chain/core.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/chain/core.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/controllers/chain/chain.go" beforeDir="false" afterPath="$PROJECT_DIR$/http/controllers/chain/chain.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/smart_contract/marbles.go" beforeDir="false" afterPath="$PROJECT_DIR$/library/smart_contract/marbles.go" afterDir="false" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,8 +33,8 @@
       <file leaf-file-name="marbles.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/smart_contract/marbles.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1121">
-              <caret line="525" column="59" selection-start-line="525" selection-start-column="48" selection-end-line="525" selection-end-column="59" />
+            <state relative-caret-position="38">
+              <caret line="474" column="45" selection-start-line="474" selection-start-column="26" selection-end-line="474" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -42,17 +42,17 @@
       <file leaf-file-name="route.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/http/route/route.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="80" column="45" lean-forward="true" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
+            <state relative-caret-position="186">
+              <caret line="71" column="47" lean-forward="true" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chain.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="chain.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/http/controllers/chain/chain.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="207" column="33" selection-start-line="207" selection-start-column="33" selection-end-line="207" selection-end-column="33" />
+            <state relative-caret-position="252">
+              <caret line="71" column="30" lean-forward="true" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -87,7 +87,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="core.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="core.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/chain/core.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
@@ -215,8 +215,9 @@
         <option value="$PROJECT_DIR$/config/conf/block_chain_config.yaml" />
         <option value="$PROJECT_DIR$/http/route/route.go" />
         <option value="$PROJECT_DIR$/service/chain/experiment.go" />
-        <option value="$PROJECT_DIR$/http/controllers/chain/chain.go" />
         <option value="$PROJECT_DIR$/service/chain/core.go" />
+        <option value="$PROJECT_DIR$/library/smart_contract/marbles.go" />
+        <option value="$PROJECT_DIR$/http/controllers/chain/chain.go" />
       </list>
     </option>
   </component>
@@ -956,34 +957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/smart_contract/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="172" column="36" selection-start-line="172" selection-start-column="22" selection-end-line="172" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/smart_contract/marbles.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1121">
-          <caret line="525" column="59" selection-start-line="525" selection-start-column="48" selection-end-line="525" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/route/route.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="80" column="45" lean-forward="true" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/controllers/chain/chain.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="207" column="33" selection-start-line="207" selection-start-column="33" selection-end-line="207" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service/chain/business.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -995,6 +968,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="137" selection-start-line="137" selection-end-line="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/smart_contract/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="172" column="36" selection-start-line="172" selection-start-column="22" selection-end-line="172" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/smart_contract/marbles.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="474" column="45" selection-start-line="474" selection-start-column="26" selection-end-line="474" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/route/route.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="71" column="47" lean-forward="true" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/controllers/chain/chain.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="71" column="30" lean-forward="true" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
         </state>
       </provider>
     </entry>

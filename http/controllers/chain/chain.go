@@ -63,9 +63,11 @@ func GetByRange(c *gin.Context) {
 	SendResponse(c, nil, rst)
 }
 
-
+// 支持rich select ：
+// "{\"selector\":{\"owner\":{\"$eq\":\"felix\"}}}"
 func QueryResult(c *gin.Context) {
 	key := c.Query("key")
+	key = "{\"selector\":{\"owner\":{\"$eq\":\"felix\"}}}"
 	blockChain := &chain.BlockChain{}
 	rst, err := blockChain.QueryResult(key)
 	if err != nil {
