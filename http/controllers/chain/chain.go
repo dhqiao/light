@@ -9,6 +9,7 @@ import (
 	"encoding/pem"
 	"crypto/x509"
 	"io/ioutil"
+	"encoding/base64"
 )
 
 func Get(c *gin.Context) {
@@ -229,17 +230,17 @@ func TestCertificate(c *gin.Context)  {
 }
 
 func ReadFile(c *gin.Context)  {
-	keyPath := "service/crypto-config/peerOrganizations/member1.example.com/users/Admin@member1.example.com/tls/client.key"
+	//keyPath := "service/crypto-config/peerOrganizations/member1.example.com/users/Admin@member1.example.com/tls/client.key"
 
 	//certPath := "service/crypto-config/peerOrganizations/member1.example.com/users/Admin@member1.example.com/tls/client.crt"
-	//client1 := "/home/felix/fabric/fabric-pa/Admin@org1.example.com/tls/client.crt"
+	client1 := "/home/felix/fabric/fabric-pa/Admin@org1.example.com/tls/client.crt"
 	path := c.Query("path")
 	var creatorByte []byte
 	var err error
 	if path != "" {
 		creatorByte, err = ioutil.ReadFile(path)
 	} else {
-		creatorByte, err = ioutil.ReadFile(keyPath)
+		creatorByte, err = ioutil.ReadFile(client1)
 	}
 
 
@@ -260,6 +261,8 @@ func ReadFile(c *gin.Context)  {
 	}
 	uname:=cert.Subject.CommonName
 	fmt.Println("Name:"+uname)
-	fmt.Println("all-----:", cert)
+	value := cert.Extensions[0].Value
+	stringR, err := base64.StdEncoding.DecodeString(string(value))
+	fmt.Println(string(stringR[:]))
 	SendResponse(c, nil, cert)
 }
