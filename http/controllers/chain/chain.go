@@ -5,6 +5,10 @@ import (
 	"github.com/gin-gonic/gin"
 	"light/service/chain"
 	"fmt"
+	"bytes"
+	"encoding/pem"
+	"crypto/x509"
+	"io/ioutil"
 )
 
 func Get(c *gin.Context) {
@@ -222,4 +226,31 @@ func TestCertificate(c *gin.Context)  {
 		SendResponse(c, nil, err.Error())
 	}
 	SendResponse(c, nil, rst)
+}
+
+func ReadFile(c *gin.Context)  {
+	//keyPath := "service/crypto-config/peerOrganizations/member1.example.com/users/Admin@member1.example.com/tls/client.key"
+
+	certPath := "service/crypto-config/peerOrganizations/member1.example.com/users/Admin@member1.example.com/tls/client.crt"
+	creatorByte, err := ioutil.ReadFile(certPath)
+
+	//creatorByte,_:= stub.GetCreator()
+	certStart := bytes.IndexAny(creatorByte, "-----BEGIN")
+	if certStart == -1 {
+		fmt.Errorf("No certificate found")
+	}
+	certText := creatorByte[certStart:]
+	bl, _ := pem.Decode(certText)
+	if bl == nil {
+		fmt.Errorf("Could not decode the PEM structure")
+	}
+
+	cert, err := x509.ParseCertificate(bl.Bytes)
+	if err != nil {
+		fmt.Errorf("ParseCertificate failed")
+	}
+	uname:=cert.Subject.CommonName
+	fmt.Println("Name:"+uname)
+	fmt.Println("all-----:", cert)
+	SendResponse(c, nil, cert)
 }

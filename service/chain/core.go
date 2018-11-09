@@ -140,7 +140,7 @@ func (blockChain *BlockChain) Request(chainCodeId, fcn string, args [][]byte) (B
 	blockChainResponse.Data = cert1
 
 	fmt.Println("---------------------cert1--------------", cert1)
-	fmt.Println("---------------------cert2--------------", cert1.Subject.Names)
+	fmt.Println("---------------------cert2--------------", cert1.Extensions)
 
 	cert, err := x509.ParseCertificate(response.Responses[0].Payload[:])
 	fmt.Println("---------------------cert--------------", cert)

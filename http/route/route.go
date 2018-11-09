@@ -82,6 +82,9 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 
 		// test
 		blockChain.GET("testCertificate", chain.TestCertificate)
+		blockChain.GET("readFile", chain.ReadFile)
+
+
 
 	}
 
