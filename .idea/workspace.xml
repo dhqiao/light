@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d957b897-5dc9-4b7b-8a8f-843dcfd612c7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/http/controllers/chain/chain.go" beforeDir="false" afterPath="$PROJECT_DIR$/http/controllers/chain/chain.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/chain/experiment.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/chain/experiment.go" afterDir="false" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +23,8 @@
       <file leaf-file-name="chain.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/http/controllers/chain/chain.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="229" column="6" selection-start-line="229" selection-start-column="6" selection-end-line="229" selection-end-column="6" />
+            <state relative-caret-position="381">
+              <caret line="230" column="32" selection-start-line="230" selection-start-column="32" selection-end-line="230" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -993,8 +992,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/http/controllers/chain/chain.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="229" column="6" selection-start-line="229" selection-start-column="6" selection-end-line="229" selection-end-column="6" />
+        <state relative-caret-position="381">
+          <caret line="230" column="32" selection-start-line="230" selection-start-column="32" selection-end-line="230" selection-end-column="32" />
         </state>
       </provider>
     </entry>
