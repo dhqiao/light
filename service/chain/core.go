@@ -167,6 +167,8 @@ func call(channelClient *channel.Client,request channel.Request) (channel.Respon
 		return channelClient.Query(request)
 	case WriteHouse:
 		return channelClient.Execute(request)
+	case TestCertificate:
+		return channelClient.Query(request)
 	}
 	return channel.Response{}, errors.New("call unknown func: " + request.Fcn)
 }
