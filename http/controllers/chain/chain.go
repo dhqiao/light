@@ -231,8 +231,17 @@ func TestCertificate(c *gin.Context)  {
 func ReadFile(c *gin.Context)  {
 	//keyPath := "service/crypto-config/peerOrganizations/member1.example.com/users/Admin@member1.example.com/tls/client.key"
 
-	certPath := "service/crypto-config/peerOrganizations/member1.example.com/users/Admin@member1.example.com/tls/client.crt"
-	creatorByte, err := ioutil.ReadFile(certPath)
+	//certPath := "service/crypto-config/peerOrganizations/member1.example.com/users/Admin@member1.example.com/tls/client.crt"
+	client1 := "/home/felix/fabric/fabric-pa/User1@org1.example.com/tls/client.crt"
+	path := c.Query("path")
+	var creatorByte []byte
+	var err error
+	if path != "" {
+		creatorByte, err = ioutil.ReadFile(path)
+	} else {
+		creatorByte, err = ioutil.ReadFile(client1)
+	}
+
 
 	//creatorByte,_:= stub.GetCreator()
 	certStart := bytes.IndexAny(creatorByte, "-----BEGIN")
