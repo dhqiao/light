@@ -136,7 +136,7 @@ func (blockChain *BlockChain) Request(chainCodeId, fcn string, args [][]byte) (B
 
 	var data2 interface{}
 	json.Unmarshal(response.Responses[0].Payload, &data2)
-	cert1, err := x509.ParseCertificate(response.Proposal.Payload[:])
+	cert1, err := x509.ParseCertificate(response.Payload)
 	fmt.Println("---------------------cert1--------------", cert1)
 
 	cert, err := x509.ParseCertificate(response.Responses[0].Payload[:])
