@@ -67,7 +67,6 @@ func GetByRange(c *gin.Context) {
 // "{\"selector\":{\"owner\":{\"$eq\":\"felix\"}}}"
 func QueryResult(c *gin.Context) {
 	key := c.Query("key")
-	key = "{\"selector\":{\"owner\":{\"$eq\":\"felix\"}}}"
 	blockChain := &chain.BlockChain{}
 	rst, err := blockChain.QueryResult(key)
 	if err != nil {

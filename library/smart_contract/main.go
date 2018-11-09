@@ -168,9 +168,12 @@ func (t *Chaincode) query(stub shim.ChaincodeStubInterface, key string) pb.Respo
 }
 
 // GetQueryResult
-func (t *Chaincode) queryResult(stub shim.ChaincodeStubInterface, key string) pb.Response {
-	fmt.Printf("queryResult %s\n", key)
-	iter, err := stub.GetQueryResult(key)
+func (t *Chaincode) queryResult(stub shim.ChaincodeStubInterface, owner string) pb.Response {
+	fmt.Printf("queryResult %s\n", owner)
+
+	queryString := fmt.Sprintf("{\"selector\":{\"owner\":{\"$eq\":\"%s\"}}}", owner)
+
+	iter, err := stub.GetQueryResult(queryString)
 	if err != nil {
 		return shim.Error("queryResult fail " + err.Error())
 	}
