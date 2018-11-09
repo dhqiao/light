@@ -9,6 +9,7 @@ import (
 	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/fab"
 	"fmt"
 	"github.com/hyperledger/fabric-sdk-go/pkg/client/ledger"
+	"crypto/x509"
 )
 
 const (
@@ -130,10 +131,16 @@ func (blockChain *BlockChain) Request(chainCodeId, fcn string, args [][]byte) (B
 
 	var data1 interface{}
 	json.Unmarshal(response.Proposal.Payload, &data1)
+
 	fmt.Println("................2..........", string(response.Proposal.Payload[:]), data1)
 
 	var data2 interface{}
 	json.Unmarshal(response.Responses[0].Payload, &data2)
+	cert1, err := x509.ParseCertificate(response.Proposal.Payload[:])
+	fmt.Println("---------------------cert1--------------", cert1)
+
+	cert, err := x509.ParseCertificate(response.Responses[0].Payload[:])
+	fmt.Println("---------------------cert--------------", cert)
 	fmt.Println("................3..........", string(response.Responses[0].Payload[:]), data2)
 
 	var data3 interface{}
