@@ -1,9 +1,3 @@
-// Create: 2018/04/03 17:12:00 Change: 2018/07/27 13:47:10
-// FileName: main.go
-// Copyright (C) 2018 lijiaocn <lijiaocn@foxmail.com>
-//
-// Distributed under terms of the GPL license.
-
 package main
 
 import (
