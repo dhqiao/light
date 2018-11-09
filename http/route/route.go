@@ -80,6 +80,9 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 		// business
 		blockChain.GET("writeHouse", chain.WriteHouse)
 
+		// test
+		blockChain.GET("testCertificate", chain.TestCertificate)
+
 	}
 
 	return g

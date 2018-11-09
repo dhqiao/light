@@ -9,6 +9,8 @@ import (
 	"github.com/hyperledger/fabric/core/chaincode/shim"
 	//"github.com/hyperledger/fabric/protos/msp"
 	pb "github.com/hyperledger/fabric/protos/peer"
+	"bytes"
+	"encoding/pem"
 )
 
 func ToChaincodergs(args ...string) [][]byte {
@@ -423,6 +425,9 @@ func (t *Chaincode) Invoke(stub shim.ChaincodeStubInterface) pb.Response {
 			return shim.Error("parametes's number is wrong")
 		}
 		return t.queryResult(stub, args[0])
+	// testCertificate
+	case "testCertificate":
+		return t.testCertificate(stub)
 
 
 		//通过当前合约，到另一个合约中进行查询
@@ -447,4 +452,28 @@ func main() {
 	if err != nil {
 		fmt.Printf("Error starting Chaincode chaincode: %s", err)
 	}
+}
+
+
+
+func (t *Chaincode) testCertificate(stub shim.ChaincodeStubInterface) pb.Response{
+	creatorByte,_:= stub.GetCreator()
+	certStart := bytes.IndexAny(creatorByte, "-----BEGIN")
+	if certStart == -1 {
+		fmt.Errorf("No certificate found")
+	}
+	certText := creatorByte[certStart:]
+	bl, _ := pem.Decode(certText)
+	if bl == nil {
+		fmt.Errorf("Could not decode the PEM structure")
+	}
+
+	cert, err := x509.ParseCertificate(bl.Bytes)
+	if err != nil {
+		fmt.Errorf("ParseCertificate failed")
+	}
+	uname:=cert.Subject.CommonName
+	fmt.Println("Name:"+uname)
+	fmt.Println("all-----:", cert)
+	return shim.Success(bl.Bytes)
 }

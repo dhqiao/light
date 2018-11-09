@@ -211,3 +211,15 @@ func WriteHouse(c *gin.Context)  {
 	}
 	SendResponse(c, nil, rst)
 }
+
+// 权限测试
+func TestCertificate(c *gin.Context)  {
+	key := c.Query("key")
+	value := c.Query("value")
+	blockChain := &chain.BlockChain{}
+	rst, err := blockChain.TestCertificate(key, value)
+	if err != nil {
+		SendResponse(c, nil, err.Error())
+	}
+	SendResponse(c, nil, rst)
+}

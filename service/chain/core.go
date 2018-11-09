@@ -33,6 +33,9 @@ const (
 	// business
 	WriteHouse = "writeHouse"
 
+	// test
+	TestCertificate = "testCertificate"
+
 )
 
 type BlockChain struct {}

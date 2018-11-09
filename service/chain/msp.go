@@ -15,3 +15,12 @@ func (blockChain *BlockChain) GetAllIdentities() (BlockChainResponse, error)  {
 	identities, err := mspClient.GetAllIdentities()
 	return BlockChainResponse{identities, "", channel.Response{}}, err
 }
+
+// 数据设置
+func (blockChain *BlockChain) TestCertificate(key, value string) (BlockChainResponse, error) {
+	var args [][]byte
+	args = append(args, []byte(key))
+	args = append(args, []byte(value))
+
+	return blockChain.Request(ChainCodeID, TestCertificate, args)
+}
