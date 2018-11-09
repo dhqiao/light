@@ -226,7 +226,8 @@ func TestCertificate(c *gin.Context)  {
 
 func ReadFile(c *gin.Context)  {
 	//certPath := "service/crypto-config/peerOrganizations/member1.example.com/users/Admin@member1.example.com/tls/client.crt"
-	client1 := "/home/felix/fabric/fabric-pa/Admin@org1.example.com/tls/client.crt"
-	cert := chain.GetCertFileInfo(client1)
+	//client1 := "/home/felix/fabric/fabric-pa/Admin@org1.example.com/tls/client.crt"
+	certPem := "/home/felix/fabric/fabric-pa/Admin@org1.example.com/msp/signcerts/cert.pem"
+	cert := chain.GetCertFileInfo(certPem)
 	SendResponse(c, nil, cert)
 }
