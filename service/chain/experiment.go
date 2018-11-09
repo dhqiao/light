@@ -9,17 +9,9 @@ import (
 	"encoding/base64"
 )
 
-// test file
-
+// test file read pem file decode
 func GetCertFileInfo(path string) *x509.Certificate {
-	//keyPath := "service/crypto-config/peerOrganizations/member1.example.com/users/Admin@member1.example.com/tls/client.key"
-
-	var creatorByte []byte
-	var err error
-	creatorByte, err = ioutil.ReadFile(path)
-
-
-	//creatorByte,_:= stub.GetCreator()
+	creatorByte, err := ioutil.ReadFile(path)
 	certStart := bytes.IndexAny(creatorByte, "-----BEGIN")
 	if certStart == -1 {
 		fmt.Errorf("No certificate found")
@@ -29,7 +21,6 @@ func GetCertFileInfo(path string) *x509.Certificate {
 	if bl == nil {
 		fmt.Errorf("Could not decode the PEM structure")
 	}
-
 	cert, err := x509.ParseCertificate(bl.Bytes)
 	if err != nil {
 		fmt.Errorf("ParseCertificate failed")
@@ -44,9 +35,7 @@ func decodeExt(cert x509.Certificate)  {
 	for i := 0; i < len(cert.Extensions); i++ {
 		value := cert.Extensions[i].Value
 		stringR, err := base64.StdEncoding.DecodeString(string(value))
-		if err != nil {
-
-		}
+		if err != nil {}
 		fmt.Println("-------------", string(value))
 		fmt.Println("..............", string(stringR[:]))
 		fmt.Println(string(stringR[:]))
