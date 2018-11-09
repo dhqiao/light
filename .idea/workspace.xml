@@ -23,8 +23,8 @@
       <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/smart_contract/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="470" column="18" selection-start-line="470" selection-end-line="471" />
+            <state relative-caret-position="343">
+              <caret line="474" column="34" selection-start-line="474" selection-start-column="11" selection-end-line="474" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -56,29 +56,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pem.go" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Go/src/encoding/pem/pem.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bytes.go" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Go/src/bytes/bytes.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="145" column="5" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="core.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/service/chain/core.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="138" column="57" lean-forward="true" selection-start-line="138" selection-start-column="57" selection-end-line="138" selection-end-column="57" />
+            <state relative-caret-position="338">
+              <caret line="140" column="72" lean-forward="true" selection-start-line="140" selection-start-column="72" selection-end-line="140" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="x509.go" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Go/src/crypto/x509/x509.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="648" column="4" selection-start-line="648" selection-start-column="4" selection-end-line="648" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pkix.go" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Go/src/crypto/x509/pkix/pkix.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="128" column="31" selection-start-line="128" selection-start-column="31" selection-end-line="128" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -621,7 +621,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/service/chain/config.yaml.private" />
     <entry file="file://$PROJECT_DIR$/config/conf/block_chain_config.yaml.private">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -890,13 +889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Go/src/crypto/x509/x509.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="1574" column="5" selection-start-line="1574" selection-start-column="5" selection-end-line="1574" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Go/src/encoding/pem/pem.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -915,13 +907,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
           <caret line="219" column="33" selection-start-line="219" selection-start-column="33" selection-end-line="219" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/smart_contract/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="470" column="18" selection-start-line="470" selection-end-line="471" />
         </state>
       </provider>
     </entry>
@@ -953,10 +938,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/library/smart_contract/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="474" column="34" selection-start-line="474" selection-start-column="11" selection-end-line="474" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/crypto/x509/x509.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="648" column="4" selection-start-line="648" selection-start-column="4" selection-end-line="648" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/crypto/x509/pkix/pkix.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="128" column="31" selection-start-line="128" selection-start-column="31" selection-end-line="128" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/service/chain/core.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="138" column="57" lean-forward="true" selection-start-line="138" selection-start-column="57" selection-end-line="138" selection-end-column="57" />
+        <state relative-caret-position="338">
+          <caret line="140" column="72" lean-forward="true" selection-start-line="140" selection-start-column="72" selection-end-line="140" selection-end-column="72" />
         </state>
       </provider>
     </entry>
