@@ -47,6 +47,8 @@ func decodeExt(cert x509.Certificate)  {
 		if err != nil {
 
 		}
+		fmt.Println("-------------", string(value))
+		fmt.Println("..............", string(stringR[:]))
 		fmt.Println(string(stringR[:]))
 	}
 }
