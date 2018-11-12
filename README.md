@@ -19,3 +19,4 @@ Function:
 13. SetPrivate
 14. GetPrivateByRange
 15. WriteMoreParams
+16. DecodeUserAttributes
