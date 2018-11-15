@@ -311,6 +311,29 @@ func (t *Chaincode) getPrivateData(stub shim.ChaincodeStubInterface, collection,
 	return shim.Success(bytes)
 }
 
+
+func (t *Chaincode) testCertificate(stub shim.ChaincodeStubInterface) pb.Response{
+	creatorByte,_:= stub.GetCreator()
+	certStart := bytes.IndexAny(creatorByte, "-----BEGIN")
+	if certStart == -1 {
+		fmt.Errorf("No certificate found")
+	}
+	certText := creatorByte[certStart:]
+	bl, _ := pem.Decode(certText)
+	if bl == nil {
+		fmt.Errorf("Could not decode the PEM structure")
+	}
+
+	cert, err := x509.ParseCertificate(bl.Bytes)
+	if err != nil {
+		fmt.Errorf("ParseCertificate failed")
+	}
+	uname:=cert.Subject.CommonName
+	fmt.Println("Name:"+uname)
+	fmt.Println("all-----:", cert)
+	return shim.Success(bl.Bytes)
+}
+
 func (t *Chaincode) getPrivateByRange(stub shim.ChaincodeStubInterface, collection, startKey, endKey string) pb.Response {
 	fmt.Printf("getCollectionByRange s% - %s - %s\n", collection, startKey, endKey)
 	iter, err := stub.GetPrivateDataByRange(collection, startKey, endKey)
@@ -455,28 +478,4 @@ func main() {
 	if err != nil {
 		fmt.Printf("Error starting Chaincode chaincode: %s", err)
 	}
-}
-
-
-
-func (t *Chaincode) testCertificate(stub shim.ChaincodeStubInterface) pb.Response{
-	creatorByte,_:= stub.GetCreator()
-	certStart := bytes.IndexAny(creatorByte, "-----BEGIN")
-	if certStart == -1 {
-		fmt.Errorf("No certificate found")
-	}
-	certText := creatorByte[certStart:]
-	bl, _ := pem.Decode(certText)
-	if bl == nil {
-		fmt.Errorf("Could not decode the PEM structure")
-	}
-
-	cert, err := x509.ParseCertificate(bl.Bytes)
-	if err != nil {
-		fmt.Errorf("ParseCertificate failed")
-	}
-	uname:=cert.Subject.CommonName
-	fmt.Println("Name:"+uname)
-	fmt.Println("all-----:", cert)
-	return shim.Success(bl.Bytes)
 }
