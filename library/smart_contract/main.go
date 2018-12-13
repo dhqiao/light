@@ -289,7 +289,7 @@ func (t *Chaincode) write(stub shim.ChaincodeStubInterface, key, value string) p
 
 //{"Args":["write","key","value"]}'
 func (t *Chaincode) setPost(stub shim.ChaincodeStubInterface, key, value string) pb.Response {
-	fmt.Printf("new felix  write %s, value is %s\n", key, value)
+	fmt.Printf("new setPost  write %s, value is %s\n", key, value)
 	var format map[string]interface{}
 	json.Unmarshal([]byte(value), &format)
 

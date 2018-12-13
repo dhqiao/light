@@ -72,7 +72,7 @@ func (blockChain *BlockChain) SetPost(key, value string) (BlockChainResponse, er
 	args = append(args, []byte(key))
 	args = append(args, []byte(value))
 
-	return blockChain.Request(ChainCodeID, Write, args)
+	return blockChain.Request(ChainCodeID, SetPost, args)
 }
 
 // 查看历史变更
