@@ -41,8 +41,26 @@
       <file leaf-file-name="chain.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/http/controllers/chain/chain.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="39" column="41" lean-forward="true" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+            <state relative-caret-position="314">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="request.go" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Go/src/net/http/request.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="234" column="19" selection-start-line="234" selection-start-column="19" selection-end-line="234" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="url.go" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Go/src/net/url/url.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="792" column="5" selection-start-line="792" selection-start-column="5" selection-end-line="792" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -79,24 +97,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="189">
               <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="join.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../fabric/peer/channel/join.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="144" selection-start-line="130" selection-end-line="144" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="endorser.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric/core/endorser/endorser.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="549" selection-start-line="450" selection-end-line="549" />
             </state>
           </provider>
         </entry>
@@ -611,20 +611,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric/orderer/consensus/kafka/consenter.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric/orderer/common/multichannel/chainsupport.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="66" column="41" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../github.com/hyperledger/fabric-sdk-go/pkg/fab/channel/cscc.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -957,10 +943,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Go/src/net/url/url.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="792" column="5" selection-start-line="792" selection-start-column="5" selection-end-line="792" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/net/http/request.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="234" column="19" selection-start-line="234" selection-start-column="19" selection-end-line="234" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/http/controllers/chain/chain.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="39" column="41" lean-forward="true" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+        <state relative-caret-position="314">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
         </state>
       </provider>
     </entry>

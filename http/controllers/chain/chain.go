@@ -31,8 +31,18 @@ func Set(c *gin.Context) {
 }
 
 func SetPost(c *gin.Context) {
-	key,_ := c.GetPostForm("key")
-	value,_ := c.GetPostForm("value")
+	key := ""
+	value := ""
+	for k, v := range c.Request.PostForm {
+		if k == "key" {
+			key = v[0]
+		}
+		if k == "value" {
+			value = v[0]
+		}
+	}
+
+
 	blockChain := &chain.BlockChain{}
 	fmt.Println("=-----------set value-----------", key, value)
 	rst, err := blockChain.Set(key, value)
