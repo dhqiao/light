@@ -30,6 +30,13 @@ type House struct {
 	Owner string `json:"owner"`
 }
 
+type TransactionData struct {
+	Value map[string]interface{} `json:"value"`
+	TradeId string `json:"trade_id"`
+	Key string `json:"key"`
+}
+
+
 //{"Args":["attr", "name"]}'
 func (t *Chaincode) attr(stub shim.ChaincodeStubInterface, args []string) pb.Response {
 	if len(args) != 1 {
@@ -281,6 +288,23 @@ func (t *Chaincode) write(stub shim.ChaincodeStubInterface, key, value string) p
 }
 
 //{"Args":["write","key","value"]}'
+func (t *Chaincode) setPost(stub shim.ChaincodeStubInterface, key, value string) pb.Response {
+	fmt.Printf("new felix  write %s, value is %s\n", key, value)
+	var format map[string]interface{}
+	json.Unmarshal([]byte(value), &format)
+
+	var data TransactionData
+	data.Key = key
+	data.Value = format
+	data.TradeId = "aaa"
+	houseBytes, _ := json.Marshal(data)
+	if err := stub.PutState(key, houseBytes); err != nil {
+		return shim.Error("write fail " + err.Error())
+	}
+	return shim.Success(nil)
+}
+
+//{"Args":["write","key","value"]}'
 func (t *Chaincode) writeHouse(stub shim.ChaincodeStubInterface, id, location, owner string) pb.Response {
 	key := id
 	fmt.Printf("writeHouse  write %s, value is %s\n", key, id)
@@ -405,6 +429,13 @@ func (t *Chaincode) Invoke(stub shim.ChaincodeStubInterface) pb.Response {
 			return shim.Error("parametes's number is wrong")
 		}
 		return t.write(stub, args[0], args[1])
+	//setPost
+	case "setPost": //写入
+		if len(args) != 2 {
+			return shim.Error("parametes's number is wrong")
+		}
+		return t.setPost(stub, args[0], args[1])
+
 		//创建一个key，并写入key的值 House，处理比write复杂
 	case "writeHouse": //写入
 		if len(args) != 3 {

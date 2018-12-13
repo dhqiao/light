@@ -21,6 +21,7 @@ const (
 	// next words are chain code has supplied functions' name
 	Query = "query"
 	Write = "write"
+	SetPost = "setPost"
 	History = "history"
 	Del = "del"
 	GetByRange = "getByRange" // startKey, endKey
@@ -58,6 +59,15 @@ func (blockChain *BlockChain) Get(key string) (BlockChainResponse, error) {
 
 // 数据设置
 func (blockChain *BlockChain) Set(key, value string) (BlockChainResponse, error) {
+	var args [][]byte
+	args = append(args, []byte(key))
+	args = append(args, []byte(value))
+
+	return blockChain.Request(ChainCodeID, Write, args)
+}
+
+// 数据设置
+func (blockChain *BlockChain) SetPost(key, value string) (BlockChainResponse, error) {
 	var args [][]byte
 	args = append(args, []byte(key))
 	args = append(args, []byte(value))
@@ -167,6 +177,8 @@ func call(channelClient *channel.Client,request channel.Request) (channel.Respon
 	case GetPrivateByRange:
 		return channelClient.Query(request)
 	case WriteHouse:
+		return channelClient.Execute(request)
+	case SetPost:
 		return channelClient.Execute(request)
 	case TestCertificate:
 		return channelClient.Query(request)

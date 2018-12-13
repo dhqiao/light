@@ -36,7 +36,7 @@ func SetPost(c *gin.Context) {
 
 	blockChain := &chain.BlockChain{}
 	fmt.Println("=-----------set ii value-----------", key, value)
-	rst, err := blockChain.Set(key, value)
+	rst, err := blockChain.SetPost(key, value)
 	if err != nil {
 		SendResponse(c, nil, err.Error())
 	}
