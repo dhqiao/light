@@ -30,6 +30,18 @@ func Set(c *gin.Context) {
 	SendResponse(c, nil, rst)
 }
 
+func SetPost(c *gin.Context) {
+	key := c.Query("key")
+	value := c.Query("value")
+	blockChain := &chain.BlockChain{}
+	fmt.Println("=-----------set value-----------", key, value)
+	rst, err := blockChain.Set(key, value)
+	if err != nil {
+		SendResponse(c, nil, err.Error())
+	}
+	SendResponse(c, nil, rst)
+}
+
 func History(c *gin.Context) {
 	key := c.Query("key")
 	blockChain := &chain.BlockChain{}

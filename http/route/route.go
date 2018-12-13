@@ -56,6 +56,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 		// base function
 		blockChain.GET("get", chain.Get)
 		blockChain.GET("set", chain.Set)
+		blockChain.POST("setpost", chain.SetPost)
 		blockChain.GET("history", chain.History)
 
 		// block info
