@@ -31,18 +31,9 @@ func Set(c *gin.Context) {
 }
 
 func SetPost(c *gin.Context) {
-	key := ""
-	value := ""
-	for k, v := range c.Request.PostForm {
-		if k == "key" {
-			key = v[0]
-		}
-		if k == "value" {
-			value = v[0]
-		}
-	}
-
-
+	key := "name"
+	value := "{\"propertyRightsList\":{\"unitNo\":\"徐汇区\",\"warrantNo\":[\"HA00003\",\"HA00004\"]}}"
+	
 	blockChain := &chain.BlockChain{}
 	fmt.Println("=-----------set value-----------", key, value)
 	rst, err := blockChain.Set(key, value)
