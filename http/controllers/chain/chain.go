@@ -33,9 +33,9 @@ func Set(c *gin.Context) {
 func SetPost(c *gin.Context) {
 	key := "name"
 	value := "{\"propertyRightsList\":{\"unitNo\":\"徐汇区\",\"warrantNo\":[\"HA00003\",\"HA00004\"]}}"
-	
+
 	blockChain := &chain.BlockChain{}
-	fmt.Println("=-----------set value-----------", key, value)
+	fmt.Println("=-----------set ii value-----------", key, value)
 	rst, err := blockChain.Set(key, value)
 	if err != nil {
 		SendResponse(c, nil, err.Error())
