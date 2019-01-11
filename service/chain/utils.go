@@ -137,6 +137,7 @@ func decodeChannelHeader(channelHeader interface{}) (string, string, string) {
 		return "", "", ""
 	}
 	channelHeaderMap, ok := channelHeader.(map[string]interface{})
+	fmt.Println(">>>>>>>>>>>>>>>>>>>>>>", channelHeader)
 	if ok {
 		return channelHeaderMap["channel_id"].(string), channelHeaderMap["timestamp"].(string), channelHeaderMap["tx_id"].(string)
 	}
