@@ -54,6 +54,18 @@ organizations:
     peers:
       - peer0.member1.example.com
 orderers:
+  orderer1.member1.example.com:
+    url: orderer1.member1.example.com:7050
+    grpcOptions:
+      ssl-target-name-override: orderer1.member1.example.com
+      keep-alive-time: 0s
+      keep-alive-timeout: 20s
+      keep-alive-permit: false
+      fail-fast: false
+      allow-insecure: false
+    tlsCACerts:
+      path: service/crypto-config/ordererOrganizations/member1.example.com/tlsca/tlsca.member1.example.com-cert.pem
+        #path: /opt/app/fabric/cli/user/member1.example.com/Admin-peer0.member1.example.com/tlsca.member1.example.com-cert.pem
 
 peers:
   peer0.member1.example.com:
