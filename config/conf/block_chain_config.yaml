@@ -87,4 +87,4 @@ entityMatchers:
     - pattern: (\w*)orderer1.member1.example.com(\w*)
       urlSubstitutionExp: orderer1.member1.example.com:7050
       sslTargetOverrideUrlSubstitutionExp: orderer1.member1.example.com
-      mappedHost: orderer0.member1.example.com
+      mappedHost: orderer1.member1.example.com
