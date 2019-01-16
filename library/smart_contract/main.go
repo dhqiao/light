@@ -296,7 +296,7 @@ func (t *Chaincode) setPost(stub shim.ChaincodeStubInterface, key, value string)
 	var data TransactionData
 	data.Key = key
 	data.Value = format
-	data.TradeId = "aaa"
+	data.TradeId = stub.GetTxID()
 	dataBytes, _ := json.Marshal(data)
 	if err := stub.PutState(key, dataBytes); err != nil {
 		return shim.Error("write fail " + err.Error())

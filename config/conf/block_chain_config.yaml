@@ -83,7 +83,7 @@ peers:
 
 entityMatchers:
   orderer:
-    - pattern: (\w*)orderer0.member1.example.com(\w*)
-      urlSubstitutionExp: orderer0.member1.example.com:7050
-      sslTargetOverrideUrlSubstitutionExp: orderer0.member1.example.com
-      mappedHost: orderer0.member1.example.com
+    - pattern: (\w*)orderer0.member10000.example.com(\w*)
+      urlSubstitutionExp: orderer0.member11111.example.com:7050
+      sslTargetOverrideUrlSubstitutionExp: orderer0.member22222.example.com
+      mappedHost: orderer0.member133333.example.com

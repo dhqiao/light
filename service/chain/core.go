@@ -18,7 +18,7 @@ const (
 	UserName = "Admin"
 	AimOrg = "member1.example.com"
 
-	// next words are chain code has supplied functions' name
+	// next words are functions' name that chain code has supplied
 	Query = "query"
 	Write = "write"
 	SetPost = "setPost"
