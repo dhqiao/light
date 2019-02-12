@@ -44,7 +44,7 @@ Loop:
 		select {
 		case msg, ok := <-consumer.Messages():
 			if ok {
-				fmt.Fprintf(os.Stdout, "%s:%s/%d/%d\t%s\t%s\n", groupId, msg.Topic, msg.Partition, msg.Offset, msg.Key, msg.Value)
+				fmt.Fprintf(os.Stdout, "...... %s:%s/%d/%d\t%s\t%s\n", groupId, msg.Topic, msg.Partition, msg.Offset, msg.Key, msg.Value)
 				consumer.MarkOffset(msg, "") // mark message as processed
 				successes++
 			}
