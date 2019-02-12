@@ -4,6 +4,7 @@ import (
 	. "light/http/controllers"
 	"github.com/gin-gonic/gin"
 	"light/service/kafka"
+	"sync"
 )
 
 func Sync(c *gin.Context) {
@@ -24,5 +25,19 @@ func Async(c *gin.Context) {
 		}
 	}()
 	kafka.SaramaProducer()
+	SendResponse(c, nil, "success")
+}
+
+func Consumer(c *gin.Context)  {
+	defer func() {
+		if err := recover(); err != nil {
+			SendResponse(c, nil, "出错")
+			return
+		}
+	}()
+	var wg = &sync.WaitGroup{}
+	wg.Add(2)
+	go kafka.ClusterConsumer(wg, "")
+	go kafka.ClusterConsumer(wg, "")
 	SendResponse(c, nil, "success")
 }

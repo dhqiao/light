@@ -5,6 +5,7 @@ import (
 	"github.com/Shopify/sarama"
 	"fmt"
 	"strconv"
+	"github.com/bsm/sarama-cluster"
 )
 
 var Address = []string{"127.0.0.1:9092","127.0.0.1:9091","127.0.0.1:9094"}
@@ -72,4 +73,15 @@ func NewAsyncProducer() (sarama.AsyncProducer, error) {
 	fmt.Println("start make producer")
 	//使用配置,新建一个异步生产者
 	return sarama.NewAsyncProducer(Address, config)
+}
+
+func NewConsumer(groupId string) (*cluster.Consumer, error) {
+	config := cluster.NewConfig()
+	config.Consumer.Return.Errors = true
+	config.Group.Return.Notifications = true
+	config.Consumer.Offsets.Initial = sarama.OffsetNewest
+	topics := []string{"test"}
+	brokers := Address
+	// init consumer
+	return cluster.NewConsumer(brokers, groupId, topics, config)
 }
