@@ -29,6 +29,7 @@ func Async(c *gin.Context) {
 }
 
 func Consumer(c *gin.Context)  {
+	groupId := c.Query("id")
 	defer func() {
 		if err := recover(); err != nil {
 			SendResponse(c, nil, "出错")
@@ -37,7 +38,7 @@ func Consumer(c *gin.Context)  {
 	}()
 	var wg = &sync.WaitGroup{}
 	wg.Add(2)
-	go kafka.ClusterConsumer(wg, "")
-	go kafka.ClusterConsumer(wg, "")
+	go kafka.ClusterConsumer(wg, groupId)
+	go kafka.ClusterConsumer(wg, groupId)
 	SendResponse(c, nil, "success")
 }
