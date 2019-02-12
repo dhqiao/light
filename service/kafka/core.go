@@ -26,8 +26,8 @@ func SaramaProducer() {
 	go func(p sarama.AsyncProducer) {
 		for {
 			select {
-			case <-p.Successes():
-				//fmt.Println("offset: ", suc.Offset, "timestamp: ", suc.Timestamp.String(), "partitions: ", suc.Partition)
+			case suc := <-p.Successes():
+				fmt.Println("$$$$ offset: ", suc.Offset, "timestamp: ", suc.Timestamp.String(), "partitions: ", suc.Partition)
 			case fail := <-p.Errors():
 				fmt.Println("err: ", fail.Err)
 			}
