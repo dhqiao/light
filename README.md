@@ -1,7 +1,7 @@
 # light
 go light framework
 
-This is a demo for hyperledger fabric Client demo for using fabric-sdk-go supporting
+1. This is a demo for hyperledger fabric Client demo for using fabric-sdk-go supporting
 
 Function:
 1. Get
@@ -21,3 +21,5 @@ Function:
 15. WriteMoreParams
 16. DecodeUserAttributes
 17. GetQueryResult(rich query from couchdb)
+
+2. demo for kafka
