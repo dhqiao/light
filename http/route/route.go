@@ -93,6 +93,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	kafkaController := g.Group("kafka")
 	{
 		kafkaController.GET("send", kafka.Sync)
+		kafkaController.GET("async", kafka.Async)
 	}
 
 	return g
