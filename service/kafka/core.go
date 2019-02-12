@@ -4,6 +4,7 @@ import (
 	"time"
 	"github.com/Shopify/sarama"
 	"fmt"
+	"strconv"
 )
 
 var Address = []string{"127.0.0.1:9092","127.0.0.1:9091","127.0.0.1:9094"}
@@ -18,7 +19,7 @@ func SaramaProducer() {
 	}
 	defer producer.AsyncClose()
 
-	/*
+
 	//循环判断哪个通道发送过来数据.
 	fmt.Println("start goroutine")
 	go func(p sarama.AsyncProducer) {
@@ -30,13 +31,15 @@ func SaramaProducer() {
 				fmt.Println("err: ", fail.Err)
 			}
 		}
-	}(producer)*/
+	}(producer)
 
 	var value string
 	for i := 0; ; i++ {
+		if i == 50 {
+			return
+		}
 		time.Sleep(500 * time.Millisecond)
-		time11 := time.Now()
-		value = "this is a message 0606 " + time11.Format("15:04:05")
+		value = strconv.Itoa(i) + " this is a message 0606 " + time.Now().Format("15:04:05")
 
 		// 发送的消息,主题。
 		// 注意：这里的msg必须得是新构建的变量，不然你会发现发送过去的消息内容都是一样的，因为批次发送消息的关系。
