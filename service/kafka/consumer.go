@@ -43,12 +43,16 @@ Loop:
 	for {
 		select {
 		case msg, ok := <-consumer.Messages():
+			fmt.Println("...........................")
 			if ok {
+				fmt.Println("------------------------")
 				fmt.Fprintf(os.Stdout, "...... %s:%s/%d/%d\t%s\t%s\n", groupId, msg.Topic, msg.Partition, msg.Offset, msg.Key, msg.Value)
 				consumer.MarkOffset(msg, "") // mark message as processed
 				successes++
+				fmt.Println("------------------------")
 			}
 		case <-signals:
+			fmt.Println("0000000000000000000000000000000")
 			break Loop
 		}
 	}
