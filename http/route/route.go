@@ -10,6 +10,7 @@ import (
 	"github.com/gin-contrib/pprof"
 	"github.com/gin-gonic/gin"
 	"light/http/controllers/chain"
+	"light/http/controllers/kafka"
 )
 
 // Load loads the middlewares, routes, handlers.
@@ -87,6 +88,11 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 
 
 
+	}
+
+	kafkaController := g.Group("kafka")
+	{
+		kafkaController.GET("send", kafka.Sync)
 	}
 
 	return g
