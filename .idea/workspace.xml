@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d957b897-5dc9-4b7b-8a8f-843dcfd612c7" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/kafka/core.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/kafka/core.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/kafka/sync.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/kafka/sync.go" afterDir="false" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sync.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sync.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/service/kafka/sync.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="33" column="28" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="28" />
+            <state relative-caret-position="205">
+              <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
               <folding>
                 <element signature="e#15#39#0" expanded="true" />
               </folding>
@@ -41,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="core.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="core.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/kafka/core.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+            <state relative-caret-position="290">
+              <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
               <folding>
                 <element signature="e#15#62#0" expanded="true" />
               </folding>
@@ -95,8 +97,8 @@
       <file leaf-file-name="kafka.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/http/controllers/kafka/kafka.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+            <state relative-caret-position="300">
+              <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
               <folding>
                 <element signature="e#15#71#0" expanded="true" />
               </folding>
@@ -119,8 +121,8 @@
       <file leaf-file-name="route.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/http/route/route.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="94" column="44" selection-start-line="94" selection-start-column="44" selection-end-line="94" selection-end-column="44" />
+            <state relative-caret-position="330">
+              <caret line="95" column="45" lean-forward="true" selection-start-line="95" selection-start-column="45" selection-end-line="95" selection-end-column="45" />
               <folding>
                 <element signature="e#16#221#0" expanded="true" />
               </folding>
@@ -139,7 +141,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>HandleChain</find>
       <find>channels</find>
       <find>orderers</find>
       <find>even</find>
@@ -169,6 +170,7 @@
       <find>wg</find>
       <find>signals</find>
       <find>Rebalanced</find>
+      <find>test</find>
     </findStrings>
     <dirStrings>
       <dir>C:\code\Go\src\fabric\core\chaincode</dir>
@@ -233,11 +235,11 @@
         <option value="$PROJECT_DIR$/config/conf/block_chain_config.yaml" />
         <option value="$PROJECT_DIR$/library/smart_contract/marbles.go" />
         <option value="$PROJECT_DIR$/library/smart_contract/main.go" />
-        <option value="$PROJECT_DIR$/service/kafka/sync.go" />
         <option value="$PROJECT_DIR$/http/route/route.go" />
         <option value="$PROJECT_DIR$/http/controllers/kafka/kafka.go" />
         <option value="$PROJECT_DIR$/service/kafka/consumer.go" />
         <option value="$PROJECT_DIR$/service/kafka/core.go" />
+        <option value="$PROJECT_DIR$/service/kafka/sync.go" />
       </list>
     </option>
   </component>
@@ -936,16 +938,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/http/route/route.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="94" column="44" selection-start-line="94" selection-start-column="44" selection-end-line="94" selection-end-column="44" />
-          <folding>
-            <element signature="e#16#221#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http/controllers/chain/chain.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -963,32 +955,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/kafka/sync.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="33" column="28" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="28" />
-          <folding>
-            <element signature="e#15#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service/kafka/consumer.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="651">
           <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
           <folding>
             <element signature="e#15#95#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/controllers/kafka/kafka.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-          <folding>
-            <element signature="e#15#71#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1000,12 +972,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/http/route/route.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="95" column="45" lean-forward="true" selection-start-line="95" selection-start-column="45" selection-end-line="95" selection-end-column="45" />
+          <folding>
+            <element signature="e#16#221#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/controllers/kafka/kafka.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+          <folding>
+            <element signature="e#15#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/service/kafka/core.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+        <state relative-caret-position="290">
+          <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
           <folding>
             <element signature="e#15#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/kafka/sync.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding>
+            <element signature="e#15#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

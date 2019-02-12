@@ -21,7 +21,7 @@ func SyncProducer()  {
 		return
 	}
 	defer p.Close()
-	topic := "test"
+	topic := Topic
 	srcValue := "sync: this is a message. index=%d"
 	for i:=0; i<10; i++ {
 		value := fmt.Sprintf(srcValue, i)

@@ -10,6 +10,9 @@ import (
 
 var Address = []string{"127.0.0.1:9092","127.0.0.1:9091","127.0.0.1:9094"}
 
+var Topic = "test"
+
+
 
 // 异步模式
 func SaramaProducer() {
@@ -21,7 +24,7 @@ func SaramaProducer() {
 	defer producer.AsyncClose()
 
 
-	//循环判断哪个通道发送过来数据.
+	//循环判断哪个通道发送过来数据. 监控发送数据的返回是否有问题，如果出现问题，可以做一些事情
 	fmt.Println("start goroutine")
 	go func(p sarama.AsyncProducer) {
 		for {
@@ -45,7 +48,7 @@ func SaramaProducer() {
 		// 发送的消息,主题。
 		// 注意：这里的msg必须得是新构建的变量，不然你会发现发送过去的消息内容都是一样的，因为批次发送消息的关系。
 		msg := &sarama.ProducerMessage{
-			Topic: "test",
+			Topic: Topic,
 		}
 
 		//将字符串转化为字节数组
@@ -80,7 +83,7 @@ func NewConsumer(groupId string) (*cluster.Consumer, error) {
 	config.Consumer.Return.Errors = true
 	config.Group.Return.Notifications = true
 	config.Consumer.Offsets.Initial = sarama.OffsetNewest
-	topics := []string{"test"}
+	topics := []string{Topic}
 	brokers := Address
 	// init consumer
 	return cluster.NewConsumer(brokers, groupId, topics, config)
