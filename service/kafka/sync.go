@@ -28,6 +28,7 @@ func SyncProducer()  {
 		msg := &sarama.ProducerMessage{
 			Topic:topic,
 			Value:sarama.ByteEncoder(value),
+			Key:sarama.ByteEncoder("aaaa"),
 		}
 		part, offset, err := p.SendMessage(msg)
 		if err != nil {
