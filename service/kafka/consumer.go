@@ -46,7 +46,7 @@ Loop:
 			fmt.Println("...........................")
 			if ok {
 				fmt.Println("------------------------")
-				fmt.Fprintf(os.Stdout, "...... %s:%s/%d/%d\t%s\t%s\n", groupId, msg.Topic, msg.Partition, msg.Offset, msg.Key, msg.Value)
+				fmt.Fprintf(os.Stdout, "...... %s:%s:%s/%d/%d\t%s\t%s\n", msg.Key, groupId, msg.Topic, msg.Partition, msg.Offset, msg.Key, msg.Value)
 				consumer.MarkOffset(msg, "") // mark message as processed
 				successes++
 				fmt.Println("------------------------")
