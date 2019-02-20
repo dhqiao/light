@@ -53,6 +53,7 @@ func SaramaProducer() {
 
 		//将字符串转化为字节数组
 		msg.Value = sarama.ByteEncoder(value)
+		msg.Key = sarama.ByteEncoder("aaaa")
 
 		//使用通道发送
 		producer.Input() <- msg
