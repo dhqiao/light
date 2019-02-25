@@ -23,7 +23,7 @@ func SyncProducer()  {
 	defer p.Close()
 	topic := Topic
 	srcValue := "sync: this is a message. index=%d"
-	for i:=0; i<10; i++ {
+	for i:=0; i<1000; i++ {
 		value := fmt.Sprintf(srcValue, i)
 		msg := &sarama.ProducerMessage{
 			Topic:topic,
