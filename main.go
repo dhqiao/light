@@ -35,5 +35,4 @@ func main()  {
 		middleware.SetGlobalData(),
 	)
 	envcheck.ServerCheck(g)
-// test
 }
