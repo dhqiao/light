@@ -1,7 +1,7 @@
 # light
 go light framework
 
-一. This is a demo for hyperledger fabric Client demo for using fabric-sdk-go supporting
+一. This is a hyperledger fabric Client demo for using fabric-sdk-go supporting
 
 Function:
 1. Get
